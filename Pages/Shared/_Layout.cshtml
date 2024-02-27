@@ -1,0 +1,174 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - trasua_web_mvc</title>
+    @*     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" asp-append-version="true" />
+    *@
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/custom.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    @*     <link rel="stylesheet" href="~/trasua_web_mvc.styles.css" asp-append-version="true" />
+    *@
+</head>
+<body>
+    @* <header>
+    <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+    <div class="container">
+    <a class="navbar-brand" asp-area="" asp-page="/Index">trasua_web_mvc</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+    aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+    <ul class="navbar-nav flex-grow-1">
+    <li class="nav-item">
+    <a class="nav-link text-dark" asp-area="" asp-page="/Index">Home</a>
+    </li>
+    <li class="nav-item">
+    <a class="nav-link text-dark" asp-area="" asp-page="/Privacy">Privacy</a>
+    </li>
+    </ul>
+    </div>
+    </div>
+    </nav>
+    </header>
+    <div class="container">
+    <main role="main" class="pb-3">
+    @RenderBody()
+    </main>
+    </div> *@
+    <div class="nav">
+
+        <div class="menu-wrap">
+            <div class="logo">
+                @Html.ActionLink("Royal Tea", "Index", "Home")
+            </div>
+            <div class="menu h-xs">
+
+                <div class="menu-item">
+                    <a href="/Home">Trang chủ</a>
+                </div>
+                <div class="menu-item">
+                    <a href="/Introduction">Giới thiệu</a>
+                </div>
+                <div class="menu-item">
+                    <a href="/Product">Sản phẩm</a>
+                </div>
+
+                @* <div class="menu-item">
+                <a>More</a>
+                <ul>
+                <li><a href="~/Products/Index">Sản phẩm</a></li>
+                <li><a href="~/Categories/Index">Loại Sản phẩm</a></li>
+                <li><a href="~/Customers/Index">Khách hàng</a></li>
+                <li><a href="~/OrderProes/Index">Đơn hàng</a></li>
+                <li><a href="~/AdminUsers/Index">Phân quyền</a></li>
+                </ul>
+                </div> *@
+            </div>
+            <div class="right-menu">
+
+                <div class="cart-btn">
+                    <a href="/ShoppingCart/BagCart">
+                        <i class='bx bxs-cart-alt'></i>
+                    </a>
+                </div>
+
+                <div class="cart-btn">
+                    @* @if (Session["User"] != null)
+                    {
+                    <a href="/AdminUsers/Information/@HttpContext.Current.Session["IDCus"].ToString()" style="font-size:12px;">@HttpContext.Current.Session["UserName"].ToString()</a>
+                    }
+                    else
+                    {
+                    <a href="/AdminUsers/Login">
+                    <i class="fa fa-user-circle-o" aria-hidden="true"></i>
+                    </a>
+                    } *@
+                    <a href="/User/Login">
+                        <i class="fa fa-user-circle-o" aria-hidden="true"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div>
+        @RenderBody()
+        <a href="#" class="back-to-top">
+            <i class="fa fa fa-angle-double-up">
+            </i>
+        </a>
+
+    </div>
+
+    <footer id="more" class="footer" style="background-image:url(../../Content/images/GC-Web-1900x335.jpg)">
+        <div style="z-index: 1; background: rgba(0, 0, 0, 0.1); ">
+            <div class="footer-container">
+                <div class="noi-dung about ">
+                    <h2>Về Chúng Tôi</h2>
+                    <p>Biết nói gì đây...</p>
+                    <ul class="social-icon">
+                        <li><a href=""><i class="fa fa-facebook"></i></a></li>
+                        <li><a href=""><i class="fa fa-twitter"></i></a></li>
+                        <li><a href=""><i class="fa fa-instagram"></i></a></li>
+                        <li><a href=""><i class="fa fa-youtube"></i></a></li>
+                    </ul>
+                </div>
+
+                <div class="noi-dung links ">
+                    <h2>Đường Dẫn</h2>
+                    <ul>
+                        <li><a href="/Home">Trang Chủ</a></li>
+                        <li><a href="/Home/about">Về Chúng Tôi</a></li>
+                        <li><a href="#">Thông Tin Liên Lạc</a></li>
+                        <li><a href="#">Dịch Vụ</a></li>
+                        <li><a href="#">Điều Kiện Chính Sách</a></li>
+                    </ul>
+                </div>
+
+                <div class="noi-dung contact ">
+                    <h2>Thông Tin Liên Hệ</h2>
+                    <ul class="info">
+                        <li>
+                            <span><i class="fa fa-map-marker"></i></span>
+                            <span>
+                                Đường Số 1<br />
+                                Quận 1, Thành Phố Hồ Chí Minh<br />
+                                Việt Nam
+                            </span>
+                        </li>
+                        <li>
+                            <span><i class="fa fa-phone"></i></span>
+                            <p>
+                                <a href="#">+84 123 456 789</a>
+                                <br />
+                                <a href="#">+84 987 654 321</a>
+                            </p>
+                        </li>
+                        <li>
+                            <span><i class="fa fa-envelope"></i></span>
+                            <p><a href="#">diachiemail@gmail.com</a></p>
+                        </li>
+                        <li>
+                            <form class="form">
+                                <input type="email" class="form__field" placeholder="Đăng Ký Subscribe Email" />
+                                <button type="button" class="btn btn--primary  uppercase">Gửi</button>
+                            </form>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </footer>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    <script src="~/lib/bootstrap/dist/js/JavaScript.js"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

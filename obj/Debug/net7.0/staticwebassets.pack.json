@@ -1,0 +1,461 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\MinhQuan\\source\\repos\\trasua_web_mvc\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\trasua_web_mvc.bundle.scp.css",
+      "PackagePath": "staticwebassets\\trasua_web_mvc.bundle.scp.css"
+    },
+    {
+      "Id": "C:\\Users\\MinhQuan\\source\\repos\\trasua_web_mvc\\wwwroot\\css\\site.css",
+      "PackagePath": "staticwebassets\\css\\site.css"
+    },
+    {
+      "Id": "C:\\Users\\MinhQuan\\source\\repos\\trasua_web_mvc\\wwwroot\\js\\.jpg",
+      "PackagePath": "staticwebassets\\js\\.jpg"
+    },
+    {
+      "Id": "C:\\Users\\MinhQuan\\source\\repos\\trasua_web_mvc\\wwwroot\\js\\1575289742410_GONG-CHA_SM-CITY-BALIWAG.jpg",
+      "PackagePath": "staticwebassets\\js\\1575289742410_GONG-CHA_SM-CITY-BALIWAG.jpg"
+    },
+    {
+      "Id": "C:\\Users\\MinhQuan\\source\\repos\\trasua_web_mvc\\wwwroot\\js\\3_1.jpg",
+      "PackagePath": "staticwebassets\\js\\3_1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\MinhQuan\\source\\repos\\trasua_web_mvc\\wwwroot\\js\\7kii3yce6ixmx0uxik3_1381_anhtintuc.jpg",
+      "PackagePath": "staticwebassets\\js\\7kii3yce6ixmx0uxik3_1381_anhtintuc.jpg"
+    },
+    {
+      "Id": "C:\\Users\\MinhQuan\\source\\repos\\trasua_web_mvc\\wwwroot\\js\\Banner-Trang-Chủ-kế-địa-chỉ-CH-800x380-01.jpg",
+      "PackagePath": "staticwebassets\\js\\Banner-Trang-Chủ-kế-địa-chỉ-CH-800x380-01.jpg"
+    },
+    {
+      "Id": "C:\\Users\\MinhQuan\\source\\repos\\trasua_web_mvc\\wwwroot\\js\\CHOCOLATE-TOFFEE-1.png",
+      "PackagePath": "staticwebassets\\js\\CHOCOLATE-TOFFEE-1.png"
+    },
+    {
+      "Id": "C:\\Users\\MinhQuan\\source\\repos\\trasua_web_mvc\\wwwroot\\js\\CộtcờLũngCúnhìntừcao.jpg",
+      "PackagePath": "staticwebassets\\js\\CộtcờLũngCúnhìntừcao.jpg"
+    },
+    {
+      "Id": "C:\\Users\\MinhQuan\\source\\repos\\trasua_web_mvc\\wwwroot\\js\\GC-Web-1900x335.jpg",
+      "PackagePath": "staticwebassets\\js\\GC-Web-1900x335.jpg"
+    },
+    {
+      "Id": "C:\\Users\\MinhQuan\\source\\repos\\trasua_web_mvc\\wwwroot\\js\\Hinh-Web-OKINAWA-TRÀ-SỮA.png",
+      "PackagePath": "staticwebassets\\js\\Hinh-Web-OKINAWA-TRÀ-SỮA.png"
+    },
+    {
+      "Id": "C:\\Users\\MinhQuan\\source\\repos\\trasua_web_mvc\\wwwroot\\js\\Hình-CH.jpg",
+      "PackagePath": "staticwebassets\\js\\Hình-CH.jpg"
+    },
+    {
+      "Id": "C:\\Users\\MinhQuan\\source\\repos\\trasua_web_mvc\\wwwroot\\js\\MINT-CHOCO-DA-XAY.png",
+      "PackagePath": "staticwebassets\\js\\MINT-CHOCO-DA-XAY.png"
+    },
+    {
+      "Id": "C:\\Users\\MinhQuan\\source\\repos\\trasua_web_mvc\\wwwroot\\js\\MINT-DA-XAY.png",
+      "PackagePath": "staticwebassets\\js\\MINT-DA-XAY.png"
+    },
+    {
+      "Id": "C:\\Users\\MinhQuan\\source\\repos\\trasua_web_mvc\\wwwroot\\js\\Mango-Milktea.png",
+      "PackagePath": "staticwebassets\\js\\Mango-Milktea.png"
+    },
+    {
+      "Id": "C:\\Users\\MinhQuan\\source\\repos\\trasua_web_mvc\\wwwroot\\js\\Okinawa-Milk-Foam-Smoothie.png",
+      "PackagePath": "staticwebassets\\js\\Okinawa-Milk-Foam-Smoothie.png"
+    },
+    {
+      "Id": "C:\\Users\\MinhQuan\\source\\repos\\trasua_web_mvc\\wwwroot\\js\\Strawberry-milk-tea.png",
+      "PackagePath": "staticwebassets\\js\\Strawberry-milk-tea.png"
+    },
+    {
+      "Id": "C:\\Users\\MinhQuan\\source\\repos\\trasua_web_mvc\\wwwroot\\js\\Tra-Sua-Dao.png",
+      "PackagePath": "staticwebassets\\js\\Tra-Sua-Dao.png"
+    },
+    {
+      "Id": "C:\\Users\\MinhQuan\\source\\repos\\trasua_web_mvc\\wwwroot\\js\\Tra-sua-dolce-tran-chau-HK.png",
+      "PackagePath": "staticwebassets\\js\\Tra-sua-dolce-tran-chau-HK.png"
+    },
+    {
+      "Id": "C:\\Users\\MinhQuan\\source\\repos\\trasua_web_mvc\\wwwroot\\js\\Tra-sua-tran-chau-HK.png",
+      "PackagePath": "staticwebassets\\js\\Tra-sua-tran-chau-HK.png"
+    },
+    {
+      "Id": "C:\\Users\\MinhQuan\\source\\repos\\trasua_web_mvc\\wwwroot\\js\\Trà-gạo-rang-4.png",
+      "PackagePath": "staticwebassets\\js\\Trà-gạo-rang-4.png"
+    },
+    {
+      "Id": "C:\\Users\\MinhQuan\\source\\repos\\trasua_web_mvc\\wwwroot\\js\\Trà-sữa-gạo-rang-1.png",
+      "PackagePath": "staticwebassets\\js\\Trà-sữa-gạo-rang-1.png"
+    },
+    {
+      "Id": "C:\\Users\\MinhQuan\\source\\repos\\trasua_web_mvc\\wwwroot\\js\\Trà-sữa-gạo-rang-okinawa-1.png",
+      "PackagePath": "staticwebassets\\js\\Trà-sữa-gạo-rang-okinawa-1.png"
+    },
+    {
+      "Id": "C:\\Users\\MinhQuan\\source\\repos\\trasua_web_mvc\\wwwroot\\js\\Trà-sữa-gạo-rang-trân-châu-trắng-2.png",
+      "PackagePath": "staticwebassets\\js\\Trà-sữa-gạo-rang-trân-châu-trắng-2.png"
+    },
+    {
+      "Id": "C:\\Users\\MinhQuan\\source\\repos\\trasua_web_mvc\\wwwroot\\js\\Trà-Bí-Đao-Alisan-2.png",
+      "PackagePath": "staticwebassets\\js\\Trà-Bí-Đao-Alisan-2.png"
+    },
+    {
+      "Id": "C:\\Users\\MinhQuan\\source\\repos\\trasua_web_mvc\\wwwroot\\js\\Trà-sữa-Chocolate-2.png",
+      "PackagePath": "staticwebassets\\js\\Trà-sữa-Chocolate-2.png"
+    },
+    {
+      "Id": "C:\\Users\\MinhQuan\\source\\repos\\trasua_web_mvc\\wwwroot\\js\\Trà-sữa-Hokkaido-2.png",
+      "PackagePath": "staticwebassets\\js\\Trà-sữa-Hokkaido-2.png"
+    },
+    {
+      "Id": "C:\\Users\\MinhQuan\\source\\repos\\trasua_web_mvc\\wwwroot\\js\\Trà-sữa-Khoai-môn-2.png",
+      "PackagePath": "staticwebassets\\js\\Trà-sữa-Khoai-môn-2.png"
+    },
+    {
+      "Id": "C:\\Users\\MinhQuan\\source\\repos\\trasua_web_mvc\\wwwroot\\js\\Trà-sữa-Matcha-đậu-đỏ-2.png",
+      "PackagePath": "staticwebassets\\js\\Trà-sữa-Matcha-đậu-đỏ-2.png"
+    },
+    {
+      "Id": "C:\\Users\\MinhQuan\\source\\repos\\trasua_web_mvc\\wwwroot\\js\\Trà-sữa-Oolong-2.png",
+      "PackagePath": "staticwebassets\\js\\Trà-sữa-Oolong-2.png"
+    },
+    {
+      "Id": "C:\\Users\\MinhQuan\\source\\repos\\trasua_web_mvc\\wwwroot\\js\\Trà-sữa-Oolong-3J-2.png",
+      "PackagePath": "staticwebassets\\js\\Trà-sữa-Oolong-3J-2.png"
+    },
+    {
+      "Id": "C:\\Users\\MinhQuan\\source\\repos\\trasua_web_mvc\\wwwroot\\js\\Trà-sữa-Pudding-đậu-đỏ-2.png",
+      "PackagePath": "staticwebassets\\js\\Trà-sữa-Pudding-đậu-đỏ-2.png"
+    },
+    {
+      "Id": "C:\\Users\\MinhQuan\\source\\repos\\trasua_web_mvc\\wwwroot\\js\\Trà-sữa-Trân-châu-đen-1.png",
+      "PackagePath": "staticwebassets\\js\\Trà-sữa-Trân-châu-đen-1.png"
+    },
+    {
+      "Id": "C:\\Users\\MinhQuan\\source\\repos\\trasua_web_mvc\\wwwroot\\js\\Trà-sữa-sương-sáo.png",
+      "PackagePath": "staticwebassets\\js\\Trà-sữa-sương-sáo.png"
+    },
+    {
+      "Id": "C:\\Users\\MinhQuan\\source\\repos\\trasua_web_mvc\\wwwroot\\js\\Trà-sữa-trà-xanh-1.png",
+      "PackagePath": "staticwebassets\\js\\Trà-sữa-trà-xanh-1.png"
+    },
+    {
+      "Id": "C:\\Users\\MinhQuan\\source\\repos\\trasua_web_mvc\\wwwroot\\js\\Trà-sữa-trà-đen-3.png",
+      "PackagePath": "staticwebassets\\js\\Trà-sữa-trà-đen-3.png"
+    },
+    {
+      "Id": "C:\\Users\\MinhQuan\\source\\repos\\trasua_web_mvc\\wwwroot\\js\\background-tra-sua-doc-dao-ngot-lim-cho-tin-do-me-tra-sua.jpg",
+      "PackagePath": "staticwebassets\\js\\background-tra-sua-doc-dao-ngot-lim-cho-tin-do-me-tra-sua.jpg"
+    },
+    {
+      "Id": "C:\\Users\\MinhQuan\\source\\repos\\trasua_web_mvc\\wwwroot\\js\\banner-menu-1900-x-335.jpg",
+      "PackagePath": "staticwebassets\\js\\banner-menu-1900-x-335.jpg"
+    },
+    {
+      "Id": "C:\\Users\\MinhQuan\\source\\repos\\trasua_web_mvc\\wwwroot\\js\\bg-qua-trinh-phat-trien.jpg",
+      "PackagePath": "staticwebassets\\js\\bg-qua-trinh-phat-trien.jpg"
+    },
+    {
+      "Id": "C:\\Users\\MinhQuan\\source\\repos\\trasua_web_mvc\\wwwroot\\js\\cong-troi-da-lat-nemtv-1.jpg",
+      "PackagePath": "staticwebassets\\js\\cong-troi-da-lat-nemtv-1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\MinhQuan\\source\\repos\\trasua_web_mvc\\wwwroot\\js\\cover-web-Genmai-01-scaled.jpg",
+      "PackagePath": "staticwebassets\\js\\cover-web-Genmai-01-scaled.jpg"
+    },
+    {
+      "Id": "C:\\Users\\MinhQuan\\source\\repos\\trasua_web_mvc\\wwwroot\\js\\cover-web-lhoàng-kim-01.jpg",
+      "PackagePath": "staticwebassets\\js\\cover-web-lhoàng-kim-01.jpg"
+    },
+    {
+      "Id": "C:\\Users\\MinhQuan\\source\\repos\\trasua_web_mvc\\wwwroot\\js\\favicon.ico",
+      "PackagePath": "staticwebassets\\js\\favicon.ico"
+    },
+    {
+      "Id": "C:\\Users\\MinhQuan\\source\\repos\\trasua_web_mvc\\wwwroot\\js\\icon1.png",
+      "PackagePath": "staticwebassets\\js\\icon1.png"
+    },
+    {
+      "Id": "C:\\Users\\MinhQuan\\source\\repos\\trasua_web_mvc\\wwwroot\\js\\icon2.png",
+      "PackagePath": "staticwebassets\\js\\icon2.png"
+    },
+    {
+      "Id": "C:\\Users\\MinhQuan\\source\\repos\\trasua_web_mvc\\wwwroot\\js\\icon3.png",
+      "PackagePath": "staticwebassets\\js\\icon3.png"
+    },
+    {
+      "Id": "C:\\Users\\MinhQuan\\source\\repos\\trasua_web_mvc\\wwwroot\\js\\icons8-user-100.png",
+      "PackagePath": "staticwebassets\\js\\icons8-user-100.png"
+    },
+    {
+      "Id": "C:\\Users\\MinhQuan\\source\\repos\\trasua_web_mvc\\wwwroot\\js\\in_2740_gong-cha_500x300.png",
+      "PackagePath": "staticwebassets\\js\\in_2740_gong-cha_500x300.png"
+    },
+    {
+      "Id": "C:\\Users\\MinhQuan\\source\\repos\\trasua_web_mvc\\wwwroot\\js\\lytra-350x441.png",
+      "PackagePath": "staticwebassets\\js\\lytra-350x441.png"
+    },
+    {
+      "Id": "C:\\Users\\MinhQuan\\source\\repos\\trasua_web_mvc\\wwwroot\\js\\site.js",
+      "PackagePath": "staticwebassets\\js\\site.js"
+    },
+    {
+      "Id": "C:\\Users\\MinhQuan\\source\\repos\\trasua_web_mvc\\wwwroot\\js\\tra-sua-creme-brulee.png",
+      "PackagePath": "staticwebassets\\js\\tra-sua-creme-brulee.png"
+    },
+    {
+      "Id": "C:\\Users\\MinhQuan\\source\\repos\\trasua_web_mvc\\wwwroot\\lib\\bootstrap\\LICENSE",
+      "PackagePath": "staticwebassets\\lib\\bootstrap"
+    },
+    {
+      "Id": "C:\\Users\\MinhQuan\\source\\repos\\trasua_web_mvc\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css"
+    },
+    {
+      "Id": "C:\\Users\\MinhQuan\\source\\repos\\trasua_web_mvc\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
+    },
+    {
+      "Id": "C:\\Users\\MinhQuan\\source\\repos\\trasua_web_mvc\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
+    },
+    {
+      "Id": "C:\\Users\\MinhQuan\\source\\repos\\trasua_web_mvc\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\MinhQuan\\source\\repos\\trasua_web_mvc\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\MinhQuan\\source\\repos\\trasua_web_mvc\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\MinhQuan\\source\\repos\\trasua_web_mvc\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\MinhQuan\\source\\repos\\trasua_web_mvc\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\MinhQuan\\source\\repos\\trasua_web_mvc\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css"
+    },
+    {
+      "Id": "C:\\Users\\MinhQuan\\source\\repos\\trasua_web_mvc\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
+    },
+    {
+      "Id": "C:\\Users\\MinhQuan\\source\\repos\\trasua_web_mvc\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
+    },
+    {
+      "Id": "C:\\Users\\MinhQuan\\source\\repos\\trasua_web_mvc\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\MinhQuan\\source\\repos\\trasua_web_mvc\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\MinhQuan\\source\\repos\\trasua_web_mvc\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\MinhQuan\\source\\repos\\trasua_web_mvc\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\MinhQuan\\source\\repos\\trasua_web_mvc\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\MinhQuan\\source\\repos\\trasua_web_mvc\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css"
+    },
+    {
+      "Id": "C:\\Users\\MinhQuan\\source\\repos\\trasua_web_mvc\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map"
+    },
+    {
+      "Id": "C:\\Users\\MinhQuan\\source\\repos\\trasua_web_mvc\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css"
+    },
+    {
+      "Id": "C:\\Users\\MinhQuan\\source\\repos\\trasua_web_mvc\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\MinhQuan\\source\\repos\\trasua_web_mvc\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\MinhQuan\\source\\repos\\trasua_web_mvc\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\MinhQuan\\source\\repos\\trasua_web_mvc\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\MinhQuan\\source\\repos\\trasua_web_mvc\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\MinhQuan\\source\\repos\\trasua_web_mvc\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css"
+    },
+    {
+      "Id": "C:\\Users\\MinhQuan\\source\\repos\\trasua_web_mvc\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
+    },
+    {
+      "Id": "C:\\Users\\MinhQuan\\source\\repos\\trasua_web_mvc\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\Users\\MinhQuan\\source\\repos\\trasua_web_mvc\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\MinhQuan\\source\\repos\\trasua_web_mvc\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\MinhQuan\\source\\repos\\trasua_web_mvc\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\MinhQuan\\source\\repos\\trasua_web_mvc\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\MinhQuan\\source\\repos\\trasua_web_mvc\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\MinhQuan\\source\\repos\\trasua_web_mvc\\wwwroot\\lib\\bootstrap\\dist\\css\\custom.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\custom.css"
+    },
+    {
+      "Id": "C:\\Users\\MinhQuan\\source\\repos\\trasua_web_mvc\\wwwroot\\lib\\bootstrap\\dist\\js\\JavaScript.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\JavaScript.js"
+    },
+    {
+      "Id": "C:\\Users\\MinhQuan\\source\\repos\\trasua_web_mvc\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js"
+    },
+    {
+      "Id": "C:\\Users\\MinhQuan\\source\\repos\\trasua_web_mvc\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
+    },
+    {
+      "Id": "C:\\Users\\MinhQuan\\source\\repos\\trasua_web_mvc\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
+    },
+    {
+      "Id": "C:\\Users\\MinhQuan\\source\\repos\\trasua_web_mvc\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
+    },
+    {
+      "Id": "C:\\Users\\MinhQuan\\source\\repos\\trasua_web_mvc\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js"
+    },
+    {
+      "Id": "C:\\Users\\MinhQuan\\source\\repos\\trasua_web_mvc\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map"
+    },
+    {
+      "Id": "C:\\Users\\MinhQuan\\source\\repos\\trasua_web_mvc\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js"
+    },
+    {
+      "Id": "C:\\Users\\MinhQuan\\source\\repos\\trasua_web_mvc\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map"
+    },
+    {
+      "Id": "C:\\Users\\MinhQuan\\source\\repos\\trasua_web_mvc\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js"
+    },
+    {
+      "Id": "C:\\Users\\MinhQuan\\source\\repos\\trasua_web_mvc\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js.map"
+    },
+    {
+      "Id": "C:\\Users\\MinhQuan\\source\\repos\\trasua_web_mvc\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
+    },
+    {
+      "Id": "C:\\Users\\MinhQuan\\source\\repos\\trasua_web_mvc\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
+    },
+    {
+      "Id": "C:\\Users\\MinhQuan\\source\\repos\\trasua_web_mvc\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
+    },
+    {
+      "Id": "C:\\Users\\MinhQuan\\source\\repos\\trasua_web_mvc\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
+    },
+    {
+      "Id": "C:\\Users\\MinhQuan\\source\\repos\\trasua_web_mvc\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
+    },
+    {
+      "Id": "C:\\Users\\MinhQuan\\source\\repos\\trasua_web_mvc\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\LICENSE.md"
+    },
+    {
+      "Id": "C:\\Users\\MinhQuan\\source\\repos\\trasua_web_mvc\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.js"
+    },
+    {
+      "Id": "C:\\Users\\MinhQuan\\source\\repos\\trasua_web_mvc\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.min.js"
+    },
+    {
+      "Id": "C:\\Users\\MinhQuan\\source\\repos\\trasua_web_mvc\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.js"
+    },
+    {
+      "Id": "C:\\Users\\MinhQuan\\source\\repos\\trasua_web_mvc\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
+    },
+    {
+      "Id": "C:\\Users\\MinhQuan\\source\\repos\\trasua_web_mvc\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery\\LICENSE.txt"
+    },
+    {
+      "Id": "C:\\Users\\MinhQuan\\source\\repos\\trasua_web_mvc\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.js"
+    },
+    {
+      "Id": "C:\\Users\\MinhQuan\\source\\repos\\trasua_web_mvc\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.js"
+    },
+    {
+      "Id": "C:\\Users\\MinhQuan\\source\\repos\\trasua_web_mvc\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.build.trasua_web_mvc.props",
+      "PackagePath": "build\\trasua_web_mvc.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.buildMultiTargeting.trasua_web_mvc.props",
+      "PackagePath": "buildMultiTargeting\\trasua_web_mvc.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.buildTransitive.trasua_web_mvc.props",
+      "PackagePath": "buildTransitive\\trasua_web_mvc.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.trasua_web_mvc.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

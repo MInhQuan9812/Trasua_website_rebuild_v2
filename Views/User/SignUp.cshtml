@@ -1,0 +1,68 @@
+﻿@page
+@model trasua_web_mvc.Infracstructures.Entities.User
+
+@{
+    ViewBag.Title = "Đăng ký";
+    Layout = "~/Pages/Shared/_Layout.cshtml";
+}
+
+<div class="login fullheight bg-img bg-img-fixed align-items-center" style="background-image: url(https://gongcha.com.vn/wp-content/uploads/2018/03/H%C3%ACnh-CH.jpg)">
+    <div class="form">
+        <h3>Tạo tài khoản</h3>
+        <div style="width:100%">
+            @using (Html.BeginForm("SignUp", "User", FormMethod.Post, new { @class = "login-form" }))
+            {
+                @Html.AntiForgeryToken()
+                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                if (@ViewBag.Message != null)
+                {
+                    <script type="text/javascript">
+                        window.onload = function () {
+                            alert("@ViewBag.Message");
+                        };
+                    </script>
+                }
+
+                <div class="input">
+                    
+                    @Html.TextBoxFor(m => m.UserName, new {@placeholder="Tạo tên đăng nhập" ,@class = "form-control"})
+                </div>
+
+                @Html.ValidationMessageFor(model => model.UserName, "", new { @class = "text-danger" })
+
+                <div class="input">
+                    @Html.TextBoxFor(m => m.FullName, new {@placeholder="Họ và tên" ,@class = "form-control"})
+                </div>
+
+                @Html.ValidationMessageFor(model => model.FullName, "", new { @class = "text-danger" })
+
+                <div class="input">
+                    @Html.TextBoxFor(m => m.PhoneNumber, new {@placeholder="Số điện thoại" ,@class = "form-control"})
+                </div>
+
+                @Html.ValidationMessageFor(model => model.PhoneNumber, "", new { @class = "text-danger" })
+
+                <div class="input">
+                    @Html.TextBoxFor(m => m.Email, new {@placeholder="Email" ,@class = "form-control"})
+                </div>
+
+                @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
+
+                <div class="input">
+                    @Html.PasswordFor(m => m.Password, new { @placeholder = "Mật khẩu",type="password" } )
+                </div>
+
+                @Html.ValidationMessageFor(model => model.Password, "", new { @class = "text-danger" })
+
+                <button type="submit">
+                    Đăng ký
+                </button>
+
+            }
+        </div>
+        <p>Đã có tài khoản<a href="/User/Login">Đăng nhập</a></p>
+    </div>
+</div>
+</div>
+
+

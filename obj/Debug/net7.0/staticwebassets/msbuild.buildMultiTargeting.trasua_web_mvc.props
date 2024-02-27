@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\trasua_web_mvc.props" />
+</Project>

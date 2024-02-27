@@ -1,0 +1,131 @@
+﻿@page
+
+@{
+    ViewBag.Title = "Trang chủ";
+    Layout = "~/Pages/Shared/_Layout.cshtml";
+
+}
+
+<section id="home" class="home fullheight bg-img bg-img-fixed"
+         style="background-image: url(https://gongcha.com.vn/wp-content/uploads/2024/01/cover-web-da%CC%82u-scaled.jpg);padding:0;  ">
+    <div class="align-items-center"
+         style="z-index: 1; background: rgba(black, 0.5); height: 100%; align-items: center; display: flex; padding-bottom: 3rem; background: rgba(0, 0, 0, 0.5);">
+        <div class="container">
+            <div class="row">
+                <div class="col-6 col-xs-12">
+                    <div class="slogan">
+                        <h1>
+                            Gong Cha
+                        </h1>
+                        <p>
+                            Bên cạnh những tự hào về những ly trà sữa ngon-sạch-tươi,chúng tôi luôn tự tin mang đến khách hàng những
+                            trải nghiệm tốt nhất về dịch vụ và không gian.
+                        </p>
+                        <button onclick="location.href='#food-menu-section'">
+                            @Html.ActionLink("Order Now", "Index", "Products")
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</section>
+
+
+<div class="fullheight align-items-center" id="about">
+    <div class="container">
+        <div class="row">
+            <div class="col-7 h-xs">
+                <img src="~/js/Trà-sữa-Trân-châu-đen-1.png" alt="" class="fullwidth">
+            </div>
+            <div class="col-5 col-xs-12 align-items-center">
+                <div class="about-slogan">
+                    <h3>
+                        <span class="primary-color">Chúng tôi</span> sẽ mang lại những kí ức<span class="primary-color">
+                            đẹp
+                            nhất
+                        </span> dành cho
+                        <span class="primary-color">bạn</span>
+                    </h3>
+                    <p>
+                        Một trong những dòng thức uống nổi bật với nhiều lựa chọn độc đáo. Đặc biệt với Trà sữa Oolong 3J, Trà sữa pudding đậu đỏ với topping đa dạng mang đậm bản sắc Đài Loan.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--END SECTION HOME-->
+<!--FOOD MENU SECTION-->
+<section class="align-items-center bg-img bg-img-fixed" id="food-menu-section"
+         style="background-image: url(../../Content/images/Banner-Trang-Chủ-kế-địa-chỉ-CH-800x380-01.jpg); ">
+    <div class="container">
+        <div class="food-menu">
+            <div>
+                <h1>
+                    Sản phẩm <span class="primary-color">nổi bật</span> hôm nay
+                </h1>
+                <div class="item-panel t1 active">
+                    <h3>Thức uống đặc biệt Gongcha</h3>
+                    <p>
+                        Dòng thức uống đặc biệt kết hợp giữa trà nguyên chất với lớp milk foam béo cùng vị mặn nhẹ đặc trưng mang đến điểm nhấn sáng tạo cho một thức uống quen thuộc.
+                    </p>
+                </div>
+
+                <div class="item-panel t2">
+                    <h3>Trà nguyên chất</h3>
+                    <p>
+                        Dòng trà nguyên chất Gong Cha được nhập khẩu trực tiếp từ Đài Loan đậm đà và nguyên bản được sử dụng trong vòng 4 giờ sau khi nấu đảm bảo hương vị và chất lượng hoàn hảo!
+                    </p>
+                </div>
+
+                <div class="item-panel t3">
+                    <h3>Trà sữa</h3>
+                    <p>
+                        Một trong những dòng thức uống nổi bật với nhiều lựa chọn độc đáo. Đặc biệt với Trà sữa Oolong 3J, Trà sữa pudding đậu đỏ với topping đa dạng mang đậm bản sắc Đài Loan.
+                    </p>
+                </div>
+
+                <div class="item-panel t4">
+                    <h3>Thức uống đá xay</h3>
+                    <p>
+                        Mát lạnh và ngọt ngào, 5 loại đá xay Gong Cha mang đến một trải nghiệm về đá xay mới tại Gong Cha.
+                    </p>
+                </div>
+
+                <div class="item-panel t5">
+                    <h3>Thức uống sáng tạo</h3>
+                    <p>
+                        Dòng trà kết hợp với trái cây thanh mát mang đậm hương vị tươi mới.
+                    </p>
+                </div>
+
+                <div class="food-category">
+                    <button class="btn active" data-food-type="all" onclick="tablist1()">
+                        Thức Uống Đặc Biệt Gong Cha
+                    </button>
+                    <button class="btn" data-food-type="salad" onclick="tablist2()">
+                        Trà Nguyên Chất
+                    </button>
+                    <button class="btn" data-food-type="lorem" onclick="tablist3()">
+                        Trà Sữa
+                    </button>
+                    <button class="btn" data-food-type="ipsum" onclick="tablist4()">
+                        Thức uống đá xay
+                    </button>
+                    <button class="btn" data-food-type="dolor" onclick="tablist5()">
+                        Thức uống sáng tạo
+                    </button>
+                </div>
+                
+
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<!--END FOOD MENU SECTION-->
