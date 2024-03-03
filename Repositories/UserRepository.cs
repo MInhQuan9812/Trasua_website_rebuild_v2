@@ -11,11 +11,17 @@ namespace trasua_web_mvc.Repositories
         {
             _context = context;
         }
-
         public User AddUser(User user)
         {
             return _context.User.Add(user).Entity;
         }
+
+        public IQueryable<User> AllUser()
+        {
+            IQueryable<User> query = _context.User.AsQueryable();
+            return query;
+        }
+        
 
         public void DeleteUser(User user)
         {

@@ -19,11 +19,10 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Models\Dtos\" />
-    <Folder Include="Views\Admin\" />
-    <Folder Include="Views\Product\" />
+    <Folder Include="Models\" />
     <Folder Include="Repositories\Abstract\" />
     <Folder Include="Repositories\Implementation\" />
+    <Folder Include="wwwroot\upload\cover\" />
   </ItemGroup>
 
 </Project>

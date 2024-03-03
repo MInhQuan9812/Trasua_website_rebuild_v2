@@ -7,6 +7,7 @@ namespace trasua_web_mvc.Repositories
         private readonly TraSuaContext _context;
         private UserRepository _userRepository;
         private ProductRepository _productRepository;
+        private CategoryRepository _categoryRepository;
 
         public Worker(TraSuaContext context)
         {
@@ -41,6 +42,21 @@ namespace trasua_web_mvc.Repositories
                     }
                 }
                 return _productRepository;
+            }
+        }
+
+        public CategoryRepository categoryRepository
+        {
+            get
+            {
+                if (_categoryRepository == null)
+                {
+                    if (_context != null)
+                    {
+                        _categoryRepository = new CategoryRepository(_context);
+                    }
+                }
+                return _categoryRepository;
             }
         }
 

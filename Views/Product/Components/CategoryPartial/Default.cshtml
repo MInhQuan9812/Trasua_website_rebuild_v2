@@ -1,0 +1,15 @@
+﻿@model IEnumerable<trasua_web_mvc.Infracstructures.Entities.Category>
+
+
+<ul>
+    @{
+        foreach (var item in Model)
+        {
+            <li class="div-cate">
+                <a href="@item.Id">@item.Name</a>
+            </li>
+        }
+    }
+</ul>
+
+

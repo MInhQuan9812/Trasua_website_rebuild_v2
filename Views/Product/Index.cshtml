@@ -1,0 +1,110 @@
+﻿@using trasua_web_mvc.ViewComponents;
+@model IEnumerable<trasua_web_mvc.Infracstructures.Entities.Product>
+
+@{
+    ViewBag.Title = "Sản phẩm";
+    Layout = "~/Pages/Shared/_Layout.cshtml";
+}
+
+
+
+<div class="productsPage">
+    <div class="page-heading_container">
+        <div class="label">
+            <h2>MENU HIỆN TẠI</h2>
+            <p>Giới thiệu thức uống hấp dẫn và đa dạng từ Gong Cha</p>
+        </div>
+    </div>
+
+    <div class="breadcumbs">
+        <div class="breadcumbs_container">
+            <div class="breadcumbs_nav">
+                <span>
+                    <a href="/Home">
+                        <i class="fa fa-home"></i>
+                    </a>
+                </span>
+                <i class="fa fa-angle-right"></i>
+                <span class="title">Menu hiện tại</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="main">
+
+        <div class="terms-nav">
+            <div class="terms-nav_container">
+                <div style="border-top: 2px solid #111; margin-top: 70px; ">
+                    <div class="terms-nav_inner">
+                        @* @{
+                        Html.RenderAction("CategoryPartial", "Categories");
+                        } *@
+                        @await Component.InvokeAsync(typeof(CategoryPartial));
+                    </div>
+                    @using (Html.BeginForm("Index", "Products", FormMethod.Get))
+                    {
+                        <table>
+                            <tr>
+                                <td>
+                                    Tên Sản phẩm : <input type="text" name="SearchString" />
+                                    <input type="submit" value="Tìm kiếm" class="btn btn-warning" />
+                                </td>
+                                <td>
+                                    Đơn giá từ : <input type="number" min="0" value="0" name="min" />
+                                    Đến : <input type="number" name="max" min="0" value="0" />
+                                    <input type="submit" value="Tìm giá" class="btn btn-info" />
+                                </td>
+                            </tr>
+                        </table>
+                    }
+                </div>
+
+            </div>
+        </div>
+
+        @*Them vao cho nay*@
+
+
+        <section class="items-products" id="tudbgc">
+            <div class="container">
+                <div class="navbar">
+                    <h2 class="category-heading">Thực đơn</h2>
+                </div>
+                <div class="food-item-wrap all">
+                    @foreach (var item in Model)
+                    {
+                        <div class="food-item">
+                            <div class="item-wrap">
+                                @*<a href="/Products/Details/@Html.DisplayFor(modelItem=>item.ProductID)">*@
+                                <div class="item-img">
+                                    <div class="img-holder bg-img"
+                                         style="background-image: url(@item.Thumbnail);">
+                                     </div>
+                                </div>
+                                <div class="item-info">
+                                    <div>
+                                        <a href="/Products/Details/@Html.DisplayFor(modelItem => item.Id)">
+                                            <h3>
+                                                @Html.DisplayFor(modelItem => item.Description)
+                                            </h3>
+                                        </a>
+                                        <span>
+                                            @Html.DisplayFor(modelItem => item.Price)
+                                        </span>
+                                    </div>
+                                    <div class="cart-btn">
+                                        <a href="/ShoppingCart/AddToCart/@Html.DisplayFor(modelItem=>item.Id)" class="btn btn-danger">
+                                            <i class="bx bx-cart">
+                                            </i>
+                                        </a>
+                                    </div>
+                                </div>
+                                @*</a>*@
+                            </div>
+                        </div>
+                    }
+                </div>
+            </div>
+        </section>
+
+

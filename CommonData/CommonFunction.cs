@@ -23,6 +23,9 @@ namespace trasua_web_mvc.CommonData
             return sb.ToString();
         }
 
-        
+        public static string GetDescriptionFromContent(string inputString)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

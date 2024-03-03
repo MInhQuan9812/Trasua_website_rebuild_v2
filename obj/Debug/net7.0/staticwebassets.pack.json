@@ -337,12 +337,44 @@
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
     },
     {
+      "Id": "C:\\Users\\MinhQuan\\source\\repos\\trasua_web_mvc\\wwwroot\\lib\\bootstrap\\dist\\css\\core.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\core.css"
+    },
+    {
+      "Id": "C:\\Users\\MinhQuan\\source\\repos\\trasua_web_mvc\\wwwroot\\lib\\bootstrap\\dist\\css\\core.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\core.min.css"
+    },
+    {
       "Id": "C:\\Users\\MinhQuan\\source\\repos\\trasua_web_mvc\\wwwroot\\lib\\bootstrap\\dist\\css\\custom.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\custom.css"
     },
     {
+      "Id": "C:\\Users\\MinhQuan\\source\\repos\\trasua_web_mvc\\wwwroot\\lib\\bootstrap\\dist\\css\\dataTables.bootstrap4.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\dataTables.bootstrap4.min.css"
+    },
+    {
+      "Id": "C:\\Users\\MinhQuan\\source\\repos\\trasua_web_mvc\\wwwroot\\lib\\bootstrap\\dist\\css\\icon-font.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\icon-font.min.css"
+    },
+    {
+      "Id": "C:\\Users\\MinhQuan\\source\\repos\\trasua_web_mvc\\wwwroot\\lib\\bootstrap\\dist\\css\\responsive.bootstrap4.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\responsive.bootstrap4.min.css"
+    },
+    {
+      "Id": "C:\\Users\\MinhQuan\\source\\repos\\trasua_web_mvc\\wwwroot\\lib\\bootstrap\\dist\\css\\style.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\style.css"
+    },
+    {
+      "Id": "C:\\Users\\MinhQuan\\source\\repos\\trasua_web_mvc\\wwwroot\\lib\\bootstrap\\dist\\css\\style.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\style.min.css"
+    },
+    {
       "Id": "C:\\Users\\MinhQuan\\source\\repos\\trasua_web_mvc\\wwwroot\\lib\\bootstrap\\dist\\js\\JavaScript.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\JavaScript.js"
+    },
+    {
+      "Id": "C:\\Users\\MinhQuan\\source\\repos\\trasua_web_mvc\\wwwroot\\lib\\bootstrap\\dist\\js\\apexcharts.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\apexcharts.min.js"
     },
     {
       "Id": "C:\\Users\\MinhQuan\\source\\repos\\trasua_web_mvc\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
@@ -393,6 +425,46 @@
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
     },
     {
+      "Id": "C:\\Users\\MinhQuan\\source\\repos\\trasua_web_mvc\\wwwroot\\lib\\bootstrap\\dist\\js\\core.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\core.js"
+    },
+    {
+      "Id": "C:\\Users\\MinhQuan\\source\\repos\\trasua_web_mvc\\wwwroot\\lib\\bootstrap\\dist\\js\\core.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\core.min.js"
+    },
+    {
+      "Id": "C:\\Users\\MinhQuan\\source\\repos\\trasua_web_mvc\\wwwroot\\lib\\bootstrap\\dist\\js\\dashboard.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\dashboard.js"
+    },
+    {
+      "Id": "C:\\Users\\MinhQuan\\source\\repos\\trasua_web_mvc\\wwwroot\\lib\\bootstrap\\dist\\js\\dataTables.bootstrap4.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\dataTables.bootstrap4.min.js"
+    },
+    {
+      "Id": "C:\\Users\\MinhQuan\\source\\repos\\trasua_web_mvc\\wwwroot\\lib\\bootstrap\\dist\\js\\dataTables.responsive.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\dataTables.responsive.min.js"
+    },
+    {
+      "Id": "C:\\Users\\MinhQuan\\source\\repos\\trasua_web_mvc\\wwwroot\\lib\\bootstrap\\dist\\js\\jquery.dataTables.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\jquery.dataTables.min.js"
+    },
+    {
+      "Id": "C:\\Users\\MinhQuan\\source\\repos\\trasua_web_mvc\\wwwroot\\lib\\bootstrap\\dist\\js\\layout-settings.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\layout-settings.js"
+    },
+    {
+      "Id": "C:\\Users\\MinhQuan\\source\\repos\\trasua_web_mvc\\wwwroot\\lib\\bootstrap\\dist\\js\\process.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\process.js"
+    },
+    {
+      "Id": "C:\\Users\\MinhQuan\\source\\repos\\trasua_web_mvc\\wwwroot\\lib\\bootstrap\\dist\\js\\responsive.bootstrap4.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\responsive.bootstrap4.min.js"
+    },
+    {
+      "Id": "C:\\Users\\MinhQuan\\source\\repos\\trasua_web_mvc\\wwwroot\\lib\\bootstrap\\dist\\js\\script.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\script.min.js"
+    },
+    {
       "Id": "C:\\Users\\MinhQuan\\source\\repos\\trasua_web_mvc\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
       "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
     },
@@ -439,6 +511,22 @@
     {
       "Id": "C:\\Users\\MinhQuan\\source\\repos\\trasua_web_mvc\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
+    },
+    {
+      "Id": "C:\\Users\\MinhQuan\\source\\repos\\trasua_web_mvc\\wwwroot\\s91265816730980433919.png",
+      "PackagePath": "staticwebassets\\s91265816730980433919.png"
+    },
+    {
+      "Id": "C:\\Users\\MinhQuan\\source\\repos\\trasua_web_mvc\\wwwroot\\upload\\cover\\248e1b95-7a8e-4695-a843-38de6c8cb757-Tra-sua-Matcha (1).png",
+      "PackagePath": "staticwebassets\\upload\\cover\\248e1b95-7a8e-4695-a843-38de6c8cb757-Tra-sua-Matcha (1).png"
+    },
+    {
+      "Id": "C:\\Users\\MinhQuan\\source\\repos\\trasua_web_mvc\\wwwroot\\upload\\cover\\4b4f9f43-8a6b-4e72-a4de-7a8ac7df30c7-dao-da-xay.png",
+      "PackagePath": "staticwebassets\\upload\\cover\\4b4f9f43-8a6b-4e72-a4de-7a8ac7df30c7-dao-da-xay.png"
+    },
+    {
+      "Id": "C:\\Users\\MinhQuan\\source\\repos\\trasua_web_mvc\\wwwroot\\upload\\cover\\a942ba36-f347-4d1c-9595-65ae23d3484c-dao-da-xay.png",
+      "PackagePath": "staticwebassets\\upload\\cover\\a942ba36-f347-4d1c-9595-65ae23d3484c-dao-da-xay.png"
     },
     {
       "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.build.trasua_web_mvc.props",

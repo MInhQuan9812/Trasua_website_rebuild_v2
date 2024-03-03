@@ -1,0 +1,65 @@
+﻿@model IEnumerable<trasua_web_mvc.Infracstructures.Entities.Product>
+
+@{
+    ViewBag.Title = "Sản phẩm";
+    Layout = "~/Pages/Shared/_AdminLayout.cshtml";
+}
+
+<div class="pd-ltr-20">
+
+
+    <div class="card-box mb-30">
+        <h2 class="h4 pd-20">Danh sách sản phẩm</h2>
+        <table class="data-table table nowrap">
+            <thead>
+                <tr>
+                    <th class="table-plus datatable-nosort">Mã sản phẩm</th>
+                    <th>Tên sản phẩm</th>
+                    <th>Loại sản phẩm</th>
+                    <th>Giá</th>
+                    <th>Tình trạng</th>
+                    <th class="datatable-nosort">Action</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td class="table-plus">
+                            <img src="/@item.Thumbnail"
+                                 width="70"
+                                 height="70"
+                                 alt="" />
+                        </td>
+                        <td>
+                            <h5 class="font-16">@item.Name</h5>
+                        </td>
+                        <td>@item.CategoryId</td>
+                        <td>@item.Price</td>
+                        <td>Đang bán</td>
+                        <td>
+                            <div class="dropdown">
+                                <a class="btn btn-link font-24 p-0 line-height-1 no-arrow dropdown-toggle"
+                                   href="#"
+                                   role="button"
+                                   data-toggle="dropdown">
+                                    <i class="dw dw-more"></i>
+                                </a>
+                                <div class="dropdown-menu dropdown-menu-right dropdown-menu-icon-list">
+                                    <a class="dropdown-item" href="/admin/editProduct/{@item.Id}"><i class="dw dw-edit2"></i> Edit</a>
+                                    <a class="dropdown-item" href="/admin/deleteProduct/{@item.Id}"><i class="dw dw-delete-3"></i> Delete</a>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                }
+
+
+
+            </tbody>
+        </table>
+    </div>
+   
+    <a href="/Admin/createproduct" class="btn custom-width" style="background-color:#b81f32;color:#fff">Thêm Sản Phẩm</a>
+</div>

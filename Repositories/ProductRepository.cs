@@ -13,7 +13,7 @@ namespace trasua_web_mvc.Repositories
             _context = context;
         }
 
-        public void AddPost(Product product)
+        public void AddProduct(Product product)
         {
             _context.Product.Add(product);
         }
@@ -24,12 +24,12 @@ namespace trasua_web_mvc.Repositories
             return query;
         }
 
-        public void DeletePost(Product product)
+        public void DeleteProduct(Product product)
         {
             _context.Product.Remove(product);
         }
 
-        public void UpdatePost(Product product)
+        public void UpdateProduct(Product product)
         {
             _context.Entry(product).State = Microsoft.EntityFrameworkCore.EntityState.Modified;
         }

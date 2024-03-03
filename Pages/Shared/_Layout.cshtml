@@ -6,6 +6,7 @@
     <title>@ViewData["Title"] - trasua_web_mvc</title>
     @*     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" asp-append-version="true" />
     *@
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/custom.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
@@ -13,32 +14,6 @@
     *@
 </head>
 <body>
-    @* <header>
-    <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-    <div class="container">
-    <a class="navbar-brand" asp-area="" asp-page="/Index">trasua_web_mvc</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-    aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-    <ul class="navbar-nav flex-grow-1">
-    <li class="nav-item">
-    <a class="nav-link text-dark" asp-area="" asp-page="/Index">Home</a>
-    </li>
-    <li class="nav-item">
-    <a class="nav-link text-dark" asp-area="" asp-page="/Privacy">Privacy</a>
-    </li>
-    </ul>
-    </div>
-    </div>
-    </nav>
-    </header>
-    <div class="container">
-    <main role="main" class="pb-3">
-    @RenderBody()
-    </main>
-    </div> *@
     <div class="nav">
 
         <div class="menu-wrap">
@@ -57,16 +32,6 @@
                     <a href="/Product">Sản phẩm</a>
                 </div>
 
-                @* <div class="menu-item">
-                <a>More</a>
-                <ul>
-                <li><a href="~/Products/Index">Sản phẩm</a></li>
-                <li><a href="~/Categories/Index">Loại Sản phẩm</a></li>
-                <li><a href="~/Customers/Index">Khách hàng</a></li>
-                <li><a href="~/OrderProes/Index">Đơn hàng</a></li>
-                <li><a href="~/AdminUsers/Index">Phân quyền</a></li>
-                </ul>
-                </div> *@
             </div>
             <div class="right-menu">
 
@@ -76,20 +41,40 @@
                     </a>
                 </div>
 
-                <div class="cart-btn">
-                    @* @if (Session["User"] != null)
+                <div>
+                    @if (!User.Identity.IsAuthenticated)
                     {
-                    <a href="/AdminUsers/Information/@HttpContext.Current.Session["IDCus"].ToString()" style="font-size:12px;">@HttpContext.Current.Session["UserName"].ToString()</a>
+                        <div>
+                            <a class="nav-item">@Html.ActionLink("Đăng nhập", "login", "user", null, new { @class = "nav-link",@style="color:var(--primary-color)" })</a>
+                        </div>
                     }
                     else
                     {
-                    <a href="/AdminUsers/Login">
-                    <i class="fa fa-user-circle-o" aria-hidden="true"></i>
-                    </a>
-                    } *@
-                    <a href="/User/Login">
-                        <i class="fa fa-user-circle-o" aria-hidden="true"></i>
-                    </a>
+                        <div>
+                            <button type="button" class="btn dropdown-toggle  dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
+                                @* <i class="fa fa-user-circle-o" aria-hidden="true"></i>*@
+                                <span style="text-align: center;margin-right: 0;font-size: 16px;font-weight: 400;line-height: 25px;margin-top: -1px;width: 24px;height: 24px;">
+                                    <img src="~/s91265816730980433919.png" style="border-radius: 50%;width:25px;height:25px">
+                                </span>
+
+                            </button>
+                            <ul class="dropdown-menu">
+                                @if (User.IsInRole("Admin"))
+                                {
+                                    <li class="nav-item">
+                                        <a class="nav-link text-dark" asp-area="" asp-controller="admin" asp-action="index">Admin</a>
+                                    </li>
+                                }
+                                <li class="nav-item">
+                                    <a class="nav-link text-dark" asp-area="" asp-controller="user" asp-action="Profile">Thông tin chung</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link text-dark" asp-area="" asp-controller="user" asp-action="ShowOrdered">Đơn mua</a>
+                                </li>
+                                <li class="nav-item">@Html.ActionLink("Đăng xuất", "Logout", "User", null, new { @class = "nav-link",@style="color:var(--primary-color)" })</li>
+                            </ul>
+                        </div>
+                    }
                 </div>
             </div>
         </div>

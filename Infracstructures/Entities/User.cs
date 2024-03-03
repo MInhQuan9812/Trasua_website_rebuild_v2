@@ -29,7 +29,7 @@ namespace trasua_web_mvc.Infracstructures.Entities
 
         public virtual ICollection<Order> Orders { get; set; }=new List<Order>();
 
-        public virtual Cart Cart { get; set; } = new Cart();
+        public virtual Cart? Cart { get; set; } 
 
     }
 }

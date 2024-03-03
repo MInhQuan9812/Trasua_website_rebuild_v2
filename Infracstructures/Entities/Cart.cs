@@ -7,7 +7,7 @@ namespace trasua_web_mvc.Infracstructures.Entities
     {
         [Key]
         public int Id { get; set; }
-        public string? CusIdentify { get; set; }
+        public int? CustomerId { get; set; }
 
         public DateTime CreateAt { get; set; } = DateTime.Now;
 
@@ -15,11 +15,13 @@ namespace trasua_web_mvc.Infracstructures.Entities
 
         public virtual ICollection<CartItem> CartItems { get; set; } = new List<CartItem>();
 
-        public virtual User Customer { get; set; }
+        public virtual User? Customer { get; set; }
 
-        public Cart(string username)
+        public Cart(int customerId)
         {
-            CusIdentify=username;
+            CustomerId = customerId;
         }
+
+        public Cart() { }
     }
 }

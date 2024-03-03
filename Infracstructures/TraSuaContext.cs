@@ -39,6 +39,11 @@ namespace trasua_web_mvc.Infracstructures
             modelBuilder.Entity<User>()
                 .ToTable(nameof(User))
                 .HasKey(e => e.Id);
+
+            modelBuilder.Entity<User>()
+                .HasOne(x => x.Cart)
+                .WithOne(x => x.Customer)
+                .HasForeignKey<Cart>(x => x.CustomerId);
         }
         private void ConfigureProductModel(ModelBuilder modelBuilder)
         {
@@ -95,10 +100,11 @@ namespace trasua_web_mvc.Infracstructures
                 .ToTable(nameof(Cart))
                 .HasKey(e => e.Id);
 
-            modelBuilder.Entity<Cart>()
-                .HasOne(x => x.Customer)
-                .WithOne(x => x.Cart)
-                .HasForeignKey<Cart>(x => x.CusIdentify);
+            //modelBuilder.Entity<Cart>()
+            //    .HasOne(x => x.Customer)
+            //    .WithOne(x => x.Cart)
+            //    .HasForeignKey<Cart>(x => x.CustomerId)
+            //    .IsRequired();
         }
 
         private void ConfigureCartItem(ModelBuilder modelBuilder)

@@ -5,6 +5,7 @@ using System.Security;
 using System.Security.Claims;
 using trasua_web_mvc.Infracstructures;
 using trasua_web_mvc.Infracstructures.Entities;
+using trasua_web_mvc.NewFolder;
 using trasua_web_mvc.Repositories;
 
 namespace trasua_web_mvc.Controllers
@@ -28,7 +29,7 @@ namespace trasua_web_mvc.Controllers
         }
 
         [HttpPost]
-        public async Task<ActionResult> Login([Bind(include: "UserName,Password")] User user)
+        public async Task<ActionResult> Login([Bind(include: "UserName,Password")] LoginDto user)
         {
             if (ModelState.IsValid)
             {
@@ -110,11 +111,11 @@ namespace trasua_web_mvc.Controllers
             return View();
         }
 
-        
 
-        //public ActionResult ShowOrdered(int id)
-        //{
 
-        //}
+        public ActionResult ShowOrdered(int id)
+        {
+            return View();
+        }
     }
 }
