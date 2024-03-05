@@ -28,7 +28,7 @@
                 {
                     <tr>
                         <td class="table-plus">
-                            <img src="@item.Avatar"
+                            <img src="/@item.Avatar"
                                  width="70"
                                  height="70"
                                  alt="" />
@@ -50,20 +50,15 @@
                                 </a>
                                 <div class="dropdown-menu dropdown-menu-right dropdown-menu-icon-list">
                                     <a class="dropdown-item" href="#"><i class="dw dw-eye"></i> View</a>
-                                    <a class="dropdown-item" href="#"><i class="dw dw-edit2"></i> Edit</a>
-                                    <a class="dropdown-item" href="#"><i class="dw dw-delete-3"></i> Delete</a>
+                                    <a class="dropdown-item" href="/Admin/editUser?id=@item.Id"><i class="dw dw-edit2"></i> Edit</a>
+                                    <a class="dropdown-item" href="/Admin/deleteUser?id=@item.Id"><i class="dw dw-delete-3"></i> Delete</a>
                                 </div>
                             </div>
                         </td>
                     </tr>
-                }
-                
-                
+                }                               
             </tbody>
         </table>
     </div>
-    <div class="footer-wrap pd-20 mb-20 card-box">
-        DeskApp - Bootstrap 4 Admin Template By
-        <a href="https://github.com/dropways" target="_blank">Ankit Hingarajiya</a>
-    </div>
+    <a href="/Admin/createUser" class="btn custom-width" style="background-color:#b81f32;color:#fff">Thêm người dùng</a>
 </div>

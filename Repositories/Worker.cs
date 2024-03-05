@@ -8,7 +8,7 @@ namespace trasua_web_mvc.Repositories
         private UserRepository _userRepository;
         private ProductRepository _productRepository;
         private CategoryRepository _categoryRepository;
-
+        private CartRepository _cartRepository;
         public Worker(TraSuaContext context)
         {
             _context = context;
@@ -34,9 +34,9 @@ namespace trasua_web_mvc.Repositories
         {
             get
             {
-                if(_productRepository == null)
+                if (_productRepository == null)
                 {
-                    if(_context != null)
+                    if (_context != null)
                     {
                         _productRepository = new ProductRepository(_context);
                     }
@@ -57,6 +57,22 @@ namespace trasua_web_mvc.Repositories
                     }
                 }
                 return _categoryRepository;
+            }
+        }
+
+        public CartRepository cartRepository
+        {
+            get
+            {
+                if (_cartRepository == null)
+                {
+                    if (_context != null)
+                    {
+                        _cartRepository = new CartRepository(_context);
+                    }
+                }
+                return _cartRepository;
+
             }
         }
 

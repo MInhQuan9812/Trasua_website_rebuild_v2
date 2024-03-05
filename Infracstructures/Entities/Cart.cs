@@ -9,9 +9,9 @@ namespace trasua_web_mvc.Infracstructures.Entities
         public int Id { get; set; }
         public int? CustomerId { get; set; }
 
-        public DateTime CreateAt { get; set; } = DateTime.Now;
+        public DateTime? CreateAt { get; set; } = DateTime.Now;
 
-        public DateTime LastUpdate { get; set; } = DateTime.Now;
+        public DateTime? LastUpdate { get; set; } = DateTime.Now;
 
         public virtual ICollection<CartItem> CartItems { get; set; } = new List<CartItem>();
 

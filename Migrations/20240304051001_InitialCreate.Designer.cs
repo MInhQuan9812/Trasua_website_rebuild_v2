@@ -12,8 +12,8 @@ using trasua_web_mvc.Infracstructures;
 namespace trasua_web_mvc.Migrations
 {
     [DbContext(typeof(TraSuaContext))]
-    [Migration("20240228033634_UpdateDb1")]
-    partial class UpdateDb1
+    [Migration("20240304051001_InitialCreate")]
+    partial class InitialCreate
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -271,8 +271,7 @@ namespace trasua_web_mvc.Migrations
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<string>("Avatar")
-                        .HasMaxLength(50)
-                        .HasColumnType("nvarchar(50)");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Email")
                         .HasMaxLength(100)

@@ -23,6 +23,7 @@
     <Folder Include="Repositories\Abstract\" />
     <Folder Include="Repositories\Implementation\" />
     <Folder Include="wwwroot\upload\cover\" />
+    <Folder Include="wwwroot\upload\user\" />
   </ItemGroup>
 
 </Project>

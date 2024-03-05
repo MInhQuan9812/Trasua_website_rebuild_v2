@@ -1,0 +1,54 @@
+﻿@model trasua_web_mvc.Dtos.EditUserDto;
+
+@{
+    ViewBag.Title = "Sửa người dùng";
+    Layout = "~/Pages/Shared/_AdminLayout.cshtml";
+}
+
+<div class="pd-ltr-20">
+
+
+    <div class="card-box mb-30">
+        <div class="container">
+            <h2 class="my-4">Sửa thông tin</h2>
+            <form action="editUser" method="POST" enctype="multipart/form-data">
+                <div class="form-group">
+                    <label for="username">Username:</label>
+                    @Html.EditorFor(model => model.UserName, new { htmlAttributes = new { @class = "form-control" } })
+                </div>
+
+                <div class="form-group">
+                    <label for="fullname">FullName:</label>
+                    @Html.EditorFor(model => model.FullName, new { htmlAttributes = new { @class = "form-control" } })
+                </div>
+                <div class="form-group">
+                    <label for="fullname">PhoneNumber:</label>
+                    @Html.EditorFor(model => model.PhoneNumber, new { htmlAttributes = new { @class = "form-control" } })
+                </div>
+                <div class="form-group">
+                    <label for="fullname">Email:</label>
+                    @Html.EditorFor(model => model.Email, new { htmlAttributes = new { @class = "form-control" } })
+                </div>
+                <div class="form-group">
+                    <label for="fullname">Password:</label>
+                    @Html.EditorFor(model => model.Password, new { htmlAttributes = new { @class = "form-control" } })
+                </div>
+                <div class="form-group">
+                    <label for="fullname">Role:</label>
+                    @Html.EditorFor(model => model.Role, new { htmlAttributes = new { @class = "form-control" } })
+                </div>
+                <div class="form-group">
+                    <label for="drinkImage">Hình Ảnh:</label>
+                    <img src="/@Model.Avatar"
+                         width="70"
+                         height="70"
+                         alt="" />
+                    <input type="file" class="form-control-file" id="drinkImage" name="Avatar_Upload">
+                </div>
+                <button type="submit" class="btn btn-primary">Cập nhật</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+

@@ -517,16 +517,64 @@
       "PackagePath": "staticwebassets\\s91265816730980433919.png"
     },
     {
-      "Id": "C:\\Users\\MinhQuan\\source\\repos\\trasua_web_mvc\\wwwroot\\upload\\cover\\248e1b95-7a8e-4695-a843-38de6c8cb757-Tra-sua-Matcha (1).png",
-      "PackagePath": "staticwebassets\\upload\\cover\\248e1b95-7a8e-4695-a843-38de6c8cb757-Tra-sua-Matcha (1).png"
+      "Id": "C:\\Users\\MinhQuan\\source\\repos\\trasua_web_mvc\\wwwroot\\upload\\cover\\043cfa98-06ff-4b15-b0a4-ba13491fccbb-Tra-sua-Banh-Quy-Gung.png",
+      "PackagePath": "staticwebassets\\upload\\cover\\043cfa98-06ff-4b15-b0a4-ba13491fccbb-Tra-sua-Banh-Quy-Gung.png"
     },
     {
-      "Id": "C:\\Users\\MinhQuan\\source\\repos\\trasua_web_mvc\\wwwroot\\upload\\cover\\4b4f9f43-8a6b-4e72-a4de-7a8ac7df30c7-dao-da-xay.png",
-      "PackagePath": "staticwebassets\\upload\\cover\\4b4f9f43-8a6b-4e72-a4de-7a8ac7df30c7-dao-da-xay.png"
+      "Id": "C:\\Users\\MinhQuan\\source\\repos\\trasua_web_mvc\\wwwroot\\upload\\cover\\10668232-e1ab-4bc0-a7c9-e7c784da3f62-Tra-sua-Matcha.png",
+      "PackagePath": "staticwebassets\\upload\\cover\\10668232-e1ab-4bc0-a7c9-e7c784da3f62-Tra-sua-Matcha.png"
     },
     {
-      "Id": "C:\\Users\\MinhQuan\\source\\repos\\trasua_web_mvc\\wwwroot\\upload\\cover\\a942ba36-f347-4d1c-9595-65ae23d3484c-dao-da-xay.png",
-      "PackagePath": "staticwebassets\\upload\\cover\\a942ba36-f347-4d1c-9595-65ae23d3484c-dao-da-xay.png"
+      "Id": "C:\\Users\\MinhQuan\\source\\repos\\trasua_web_mvc\\wwwroot\\upload\\cover\\6a1ba69f-09d3-4b48-8e58-e64c62d310d2-Trà-Oolong-2.png",
+      "PackagePath": "staticwebassets\\upload\\cover\\6a1ba69f-09d3-4b48-8e58-e64c62d310d2-Trà-Oolong-2.png"
+    },
+    {
+      "Id": "C:\\Users\\MinhQuan\\source\\repos\\trasua_web_mvc\\wwwroot\\upload\\cover\\73fe89ba-1c4a-4d92-8502-c62053bd3e76-Tra-sua-Thach-Dao.png",
+      "PackagePath": "staticwebassets\\upload\\cover\\73fe89ba-1c4a-4d92-8502-c62053bd3e76-Tra-sua-Thach-Dao.png"
+    },
+    {
+      "Id": "C:\\Users\\MinhQuan\\source\\repos\\trasua_web_mvc\\wwwroot\\upload\\cover\\840294d4-3fcd-4584-ab78-89b6668171de-Mint-Chocolate-Milk-Tea-w-Pearl-Iced.png",
+      "PackagePath": "staticwebassets\\upload\\cover\\840294d4-3fcd-4584-ab78-89b6668171de-Mint-Chocolate-Milk-Tea-w-Pearl-Iced.png"
+    },
+    {
+      "Id": "C:\\Users\\MinhQuan\\source\\repos\\trasua_web_mvc\\wwwroot\\upload\\cover\\886fe211-762a-4945-8df2-cefd61a893c0-dao-hong-man-da-tuyet.png",
+      "PackagePath": "staticwebassets\\upload\\cover\\886fe211-762a-4945-8df2-cefd61a893c0-dao-hong-man-da-tuyet.png"
+    },
+    {
+      "Id": "C:\\Users\\MinhQuan\\source\\repos\\trasua_web_mvc\\wwwroot\\upload\\cover\\98fcf8d6-f9b8-45be-9263-66dd2ed18ae7-tra-xanh-kem-sua-Milo-1.png",
+      "PackagePath": "staticwebassets\\upload\\cover\\98fcf8d6-f9b8-45be-9263-66dd2ed18ae7-tra-xanh-kem-sua-Milo-1.png"
+    },
+    {
+      "Id": "C:\\Users\\MinhQuan\\source\\repos\\trasua_web_mvc\\wwwroot\\upload\\cover\\a6c7c640-00eb-4de8-8b9f-f6486d3200e6-Trà-Xanh-2.png",
+      "PackagePath": "staticwebassets\\upload\\cover\\a6c7c640-00eb-4de8-8b9f-f6486d3200e6-Trà-Xanh-2.png"
+    },
+    {
+      "Id": "C:\\Users\\MinhQuan\\source\\repos\\trasua_web_mvc\\wwwroot\\upload\\cover\\c323ae14-cb15-4867-b62e-857466edc3ee-ALISAN-TRÁI-CÂY.png",
+      "PackagePath": "staticwebassets\\upload\\cover\\c323ae14-cb15-4867-b62e-857466edc3ee-ALISAN-TRÁI-CÂY.png"
+    },
+    {
+      "Id": "C:\\Users\\MinhQuan\\source\\repos\\trasua_web_mvc\\wwwroot\\upload\\cover\\cc88f416-8f33-4692-b3db-bf5f2cdc6c2d-TRA-NHO.png",
+      "PackagePath": "staticwebassets\\upload\\cover\\cc88f416-8f33-4692-b3db-bf5f2cdc6c2d-TRA-NHO.png"
+    },
+    {
+      "Id": "C:\\Users\\MinhQuan\\source\\repos\\trasua_web_mvc\\wwwroot\\upload\\cover\\ea7130f6-127d-4244-b51e-679a5ed55c43-milo-kem-chanh-1.png",
+      "PackagePath": "staticwebassets\\upload\\cover\\ea7130f6-127d-4244-b51e-679a5ed55c43-milo-kem-chanh-1.png"
+    },
+    {
+      "Id": "C:\\Users\\MinhQuan\\source\\repos\\trasua_web_mvc\\wwwroot\\upload\\cover\\ec5445cf-3c71-4b41-abf9-12f99546453a-Strawberry-Oreo-Smoothie.png",
+      "PackagePath": "staticwebassets\\upload\\cover\\ec5445cf-3c71-4b41-abf9-12f99546453a-Strawberry-Oreo-Smoothie.png"
+    },
+    {
+      "Id": "C:\\Users\\MinhQuan\\source\\repos\\trasua_web_mvc\\wwwroot\\upload\\cover\\ecd298c7-f5f4-433f-aa91-eed5c8707338-TRA-SUA-NHO.png",
+      "PackagePath": "staticwebassets\\upload\\cover\\ecd298c7-f5f4-433f-aa91-eed5c8707338-TRA-SUA-NHO.png"
+    },
+    {
+      "Id": "C:\\Users\\MinhQuan\\source\\repos\\trasua_web_mvc\\wwwroot\\upload\\user\\13784a1a-ab05-47ec-a620-de7cf7c3c570-Whale-bơi-ngang-16-9.jpg",
+      "PackagePath": "staticwebassets\\upload\\user\\13784a1a-ab05-47ec-a620-de7cf7c3c570-Whale-bơi-ngang-16-9.jpg"
+    },
+    {
+      "Id": "C:\\Users\\MinhQuan\\source\\repos\\trasua_web_mvc\\wwwroot\\upload\\user\\5b520abb-8f75-439f-881e-a2e7ce0c2560-430148809_1476323696629662_2483501807447564639_n.jpg",
+      "PackagePath": "staticwebassets\\upload\\user\\5b520abb-8f75-439f-881e-a2e7ce0c2560-430148809_1476323696629662_2483501807447564639_n.jpg"
     },
     {
       "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.build.trasua_web_mvc.props",

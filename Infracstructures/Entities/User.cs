@@ -19,7 +19,6 @@ namespace trasua_web_mvc.Infracstructures.Entities
         [Required]
         public string Password {get; set;}
 
-        [MaxLength(Contant.Contants.AvatarMaxLength)]
         public string? Avatar { get; set;}
 
         public int Gender { get; set; } = Contants.Male;

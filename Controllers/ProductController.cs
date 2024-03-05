@@ -40,5 +40,7 @@ namespace trasua_web_mvc.Controllers
 
             return View(_worker.productRepository.AllProduct());
         }
+
+
     }
 }

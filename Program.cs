@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using trasua_web_mvc.Infracstructures;
 
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.

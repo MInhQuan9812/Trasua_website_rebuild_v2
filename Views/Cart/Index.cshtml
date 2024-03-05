@@ -1,0 +1,85 @@
+﻿@model trasua_web_mvc.Infracstructures.Entities.Cart
+@{
+    ViewBag.Title = "Giỏ hàng";
+    Layout = "~/Pages/Shared/_Layout.cshtml";
+    ViewData["Title"] = "Index";
+}
+
+<div class="container mt-3">
+    @if (Model != null&&Model.CartItems!=null&&Model.CartItems.Count>0)
+    {
+        <div class="row">
+            <div class="col-md-12">
+                <!-- Cart Items -->
+                <div class="cart-item">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <h5>Sản phẩm</h5>
+                        </div>
+                        <div class="col-md-3">
+                            <h5>Đơn giá</h5>
+                        </div>
+                        <div class="col-md-2">
+                            <h5>Số lượng</h5>
+                        </div>
+                        <div class="col-md-2">
+                            <h5>Số tiền</h5>
+                        </div>
+                        <div class="col-md-2"></div>
+                    </div>
+                </div>
+                
+                @foreach(var item in Model.CartItems)
+                {
+                    <div class="cart-item">
+                        <div class="row">
+                            <div class="col-md-3">
+                                <img src="/@item.Product.Thumbnail" alt="Product Image" width="70" height="70">
+                                <h5>@item.Product.Name</h5>
+                            </div>
+                            <div class="col-md-3">
+                                <p>@item.Product.Price</p>
+                            </div>
+                            <div class="col-md-2">
+                                <input type="number" class="form-control" value="@item.Quantity">
+                            </div>
+                            <div class="col-md-2">
+                                <p>@(item.Product.Price*item.Quantity)</p>
+                            </div>
+                            <div class="col-md-2">
+                                <button class="btn btn-sm btn-primary btn-number">+</button>
+                                <button class="btn btn-sm btn-danger btn-number">-</button>
+                            </div>
+                        </div>
+                    </div>
+                }
+                <!-- Cart Item -->
+                
+                <!-- Add more cart items here -->
+                
+            </div>
+        </div>
+        <div class="total-bar">
+            <div class="container">
+                <div class="row">
+                    
+                    <div class="col-md-4 text-right">
+                        <button class="btn btn-primary">Thanh toán</button>
+                    </div>
+                    <div class="col-md-8">
+                        <p class="total">Tổng tiền: @(Model.CartItems.Select(i=>i.Product.Price*i.Quantity).Sum())</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
+    else
+    {
+        <h3>Giỏ hàng của bạn trống</h3>
+    }
+    
+</div>
+
+<!-- Total Bar -->
+
+
