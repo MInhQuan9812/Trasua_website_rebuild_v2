@@ -82,3 +82,5 @@ C:\Users\MinhQuan\source\repos\trasua_web_mvc\bin\Debug\net7.0\Microsoft.EntityF
 C:\Users\MinhQuan\source\repos\trasua_web_mvc\bin\Debug\net7.0\Microsoft.Extensions.DependencyModel.dll
 C:\Users\MinhQuan\source\repos\trasua_web_mvc\bin\Debug\net7.0\Mono.TextTemplating.dll
 C:\Users\MinhQuan\source\repos\trasua_web_mvc\bin\Debug\net7.0\System.CodeDom.dll
+C:\Users\MinhQuan\source\repos\trasua_web_mvc\bin\Debug\net7.0\Newtonsoft.Json.dll
+C:\Users\MinhQuan\source\repos\trasua_web_mvc\bin\Debug\net7.0\PayPal.dll

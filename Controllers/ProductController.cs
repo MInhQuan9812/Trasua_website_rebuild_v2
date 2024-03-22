@@ -9,13 +9,14 @@ namespace trasua_web_mvc.Controllers
 
         private readonly TraSuaContext _context;
         private Worker _worker;
+        private readonly IConfiguration _configuration;
 
-        public ProductController(TraSuaContext context)
+
+        public ProductController(TraSuaContext context,IConfiguration configuration)
         {
             _context = context;
-            _worker = new Worker(_context);
-
-
+            _configuration = configuration;
+            _worker = new Worker(_context, _configuration);
         }
 
         public IActionResult Index(string title=null, string category=null, int? minPrice=null, int? maxPrice = null)
@@ -27,7 +28,7 @@ namespace trasua_web_mvc.Controllers
 
             //if (!string.IsNullOrEmpty(category))
             //{
-                
+
             //}
 
             //if (minPrice.HasValue)
@@ -37,8 +38,8 @@ namespace trasua_web_mvc.Controllers
             //if (maxPrice.HasValue)
             //{
             //}
-
-            return View(_worker.productRepository.AllProduct());
+            
+            return View(_worker.productRepository.GetAll());
         }
 
 

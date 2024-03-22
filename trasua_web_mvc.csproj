@@ -16,12 +16,14 @@
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
+    <PackageReference Include="PayPal" Version="1.9.1" />
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="Infracstructures\Decorator\" />
     <Folder Include="Models\" />
     <Folder Include="Repositories\Abstract\" />
-    <Folder Include="Repositories\Implementation\" />
+    <Folder Include="Services\NewFolder\" />
     <Folder Include="wwwroot\upload\cover\" />
     <Folder Include="wwwroot\upload\user\" />
   </ItemGroup>

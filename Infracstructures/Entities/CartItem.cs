@@ -9,7 +9,7 @@ namespace trasua_web_mvc.Infracstructures.Entities
 
         public int CartId { get; set; }
 
-        public int? ProductId { get; set; }
+        public int ProductId { get; set; }
 
         public int Quantity { get; set; } = 0;
 

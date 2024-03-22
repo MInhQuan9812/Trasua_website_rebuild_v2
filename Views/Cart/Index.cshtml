@@ -47,8 +47,8 @@
                                 <p>@(item.Product.Price*item.Quantity)</p>
                             </div>
                             <div class="col-md-2">
-                                <button class="btn btn-sm btn-primary btn-number">+</button>
-                                <button class="btn btn-sm btn-danger btn-number">-</button>
+                                <a href="/Cart/AddItem?productId=@item.ProductId" class="btn btn-sm btn-primary btn-number">+</a>
+                                <a href="/Cart/RemoveItem?productId=@item.ProductId" class="btn btn-sm btn-danger btn-number">-</a>
                             </div>
                         </div>
                     </div>
@@ -64,10 +64,10 @@
                 <div class="row">
                     
                     <div class="col-md-4 text-right">
-                        <button class="btn btn-primary">Thanh toán</button>
+                        <a href="/Cart/Checkout" class="btn custom-width" style="background-color:#b81f32;color:#fff">Thanh toán</a>
                     </div>
                     <div class="col-md-8">
-                        <p class="total">Tổng tiền: @(Model.CartItems.Select(i=>i.Product.Price*i.Quantity).Sum())</p>
+                        <h4 class="total">Tổng tiền: @(Model.CartItems.Select(i=>i.Product.Price*i.Quantity).Sum())</h4>
                     </div>
                 </div>
             </div>

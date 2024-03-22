@@ -20,7 +20,7 @@ namespace trasua_web_mvc.Infracstructures
         public DbSet<Cart> Cart { get; set; }
         public DbSet<OrderDetail> OrderDetail { get; set; }
         public DbSet<Promotion> Promotion { get; set; }
-
+        public DbSet<Payment> Payment { get; set; }
 
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -74,6 +74,11 @@ namespace trasua_web_mvc.Infracstructures
                 .HasOne(x => x.Promotion)
                 .WithMany(x => x.Order)
                 .HasForeignKey(x => x.PromotionId);
+
+            modelBuilder.Entity<Order>()
+                .HasOne(x => x.Payment)
+                .WithMany(x => x.Orders)
+                .HasForeignKey(x => x.PaymentId);
         }
 
         private void ConfigureOrderDetaill(ModelBuilder modelBuilder)
@@ -83,15 +88,18 @@ namespace trasua_web_mvc.Infracstructures
                 .HasKey(e => e.Id);
 
             modelBuilder.Entity<OrderDetail>()
+                .HasIndex(x => x.OrderId);
+ 
+            modelBuilder.Entity<OrderDetail>()
                 .HasOne(x => x.Order)
                 .WithMany(x => x.OrderDetails)
                 .HasForeignKey(x => x.OrderId);
 
             modelBuilder.Entity<OrderDetail>()
-                .HasOne(x => x.Product)
-                .WithOne(x => x.OrderDetail)
-                .HasForeignKey<OrderDetail>(x => x.ProductId)
-            .OnDelete(DeleteBehavior.Restrict);
+                       .HasOne(x => x.Product)
+                       .WithMany()
+                       .OnDelete(DeleteBehavior.Restrict);
+
         }
 
         private void ConfigureCart(ModelBuilder modelBuilder)

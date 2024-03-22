@@ -11,8 +11,66 @@
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    @*     <link rel="stylesheet" href="~/trasua_web_mvc.styles.css" asp-append-version="true" />
-    *@
+    <style>
+        .invoice-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 50px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .invoice-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+
+            .invoice-header h2 {
+                margin: 0;
+                color: #333;
+            }
+
+        .invoice-details {
+            margin-bottom: 30px;
+        }
+
+        .invoice-items table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 30px;
+        }
+
+        .invoice-items th, .invoice-items td {
+            padding: 10px;
+            border: 1px solid #dee2e6;
+        }
+
+        .invoice-items th {
+            background-color: #f8f9fa;
+        }
+
+        .invoice-total {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 18px;
+            background-color: #f8f9fa;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        .payment-options {
+            margin-top: 30px;
+        }
+
+            .payment-options label {
+                display: block;
+                margin-bottom: 10px;
+            }
+    </style>
 </head>
 <body>
     <div class="nav">

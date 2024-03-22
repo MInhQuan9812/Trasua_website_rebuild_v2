@@ -1,0 +1,20 @@
+﻿@{
+    ViewBag.Title = "Payment";
+    Layout = "~/Pages/Shared/_Layout.cshtml";
+}
+
+
+
+
+<div class="container">
+    <h2>Thanh toán thành công từ PayPal</h2>
+    <p>Cảm ơn bạn đã thanh toán!</p>
+
+    <ul>
+        <li><strong>Payment ID:</strong> @ViewData["PaymentId"]</li>
+        <li><strong>Token:</strong> @ViewData["Token"]</li>
+        <li><strong>Payer ID:</strong> @ViewData["PayerId"]</li>
+    </ul>
+
+</div>
+

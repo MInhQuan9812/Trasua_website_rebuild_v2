@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using System.Security;
 using System.Security.Claims;
 using trasua_web_mvc.Infracstructures;
@@ -14,11 +15,13 @@ namespace trasua_web_mvc.Controllers
     {
         private readonly TraSuaContext _context;
         private Worker _worker;
+        private readonly IConfiguration _configuration;
 
-        public UserController(TraSuaContext context)
+        public UserController(TraSuaContext context, IConfiguration configuration)
         {
             _context = context;
-            _worker = new Worker(_context);
+            _configuration = configuration;
+            _worker = new Worker(_context, _configuration);
         }
 
 
@@ -81,7 +84,6 @@ namespace trasua_web_mvc.Controllers
                     Role = user.Role,   
                 };
                
-
                 account=_worker.userRepository.AddUser(nUser);
 
                 var claims = new List<Claim>
@@ -113,9 +115,19 @@ namespace trasua_web_mvc.Controllers
 
 
 
-        public ActionResult ShowOrdered(int id)
+        public async Task<IActionResult> ShowOrdered()
         {
-            return View();
+            var user = _context.User.Where(x => x.UserName.Equals(User.Identity.Name)).FirstOrDefault();
+            var order= await _context.Order
+                .Include(o => o.OrderDetails)
+                .ThenInclude(orderDetail => orderDetail.Product)
+                .Include(x=>x.Payment)
+                .Where(o => o.CustomerId == user.Id)
+                .ToListAsync();
+
+            return View(order);
         }
+
+
     }
 }

@@ -1,0 +1,82 @@
+﻿@model trasua_web_mvc.Dtos.CheckoutDto
+
+@{
+    ViewBag.Title = "Checkout";
+    Layout = "~/Pages/Shared/_Layout.cshtml";
+}
+
+<div class="container invoice-container">
+    <div class="row">
+        <div class="col-md-12">
+            <form action="checkout" method="post" enctype="multipart/form-data">
+                <div class="invoice-header">
+                    <h2>Hóa đơn</h2>
+                    <div>
+                        <p><strong>Date:</strong> January 1, 2024</p>
+                    </div>
+                </div>
+                <div class="invoice-details form-group">
+                    <p><strong>Giao tới:</strong></p>
+                    <p><string>Họ và tên</string></p>
+                    @Html.EditorFor(model => model.FullName, new { htmlAttributes = new { @class = "form-control" } })
+                    <p><string>Số điện thoại</string></p>
+                    @Html.EditorFor(model => model.PhoneNumber, new { htmlAttributes = new { @class = "form-control" } })
+                    <p><string>Địa chỉ</string></p>
+                    @Html.EditorFor(model => model.Address, new { htmlAttributes = new { @class = "form-control" } })
+                </div>
+
+                <div class="invoice-items form-group">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Sản phẩm</th>
+                                <th>Mô tả</th>
+                                <th>Số lượng</th>
+                                <th>Đơn giá</th>
+                                <th>Tổng</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            @foreach (var item in Model.CartItems)
+                            {
+                                <tr>
+                                    <td>@item.Product.Name</td>
+                                    <td>@item.Product.Description</td>
+                                    <td>@item.Quantity</td>
+                                    <td>@item.Product.Price</td>
+                                    <td>@(item.Product.Price * item.Quantity)</td>
+                                </tr>
+                            }
+                        </tbody>
+
+
+                    </table>
+                </div>
+
+                <div class="invoice-total form-group">
+                    <div>
+                        <p><strong>Tạm tính:</strong></p>
+                        <p><strong>Giảm giá (10%):</strong></p>
+                        <p><strong>Tổng tiền:</strong></p>
+                    </div>
+                    <div>
+                        <p>$130.00</p>
+                        <p style="color:green">-$13.00</p>
+                        <p style="color:red">$143.00</p>
+                    </div>
+                </div>
+                <div class="payment-options form-group">
+                    <p><strong>Phương thức thanh toán</strong></p>
+                    @foreach (var item in Model.PaymentMethods)
+                    {
+                        <label><input type="radio" name="paymentId" value="@item.Value">@item.Text</label>
+                    }
+                </div>
+                <button type="submit" class="btn btn-primary" style="background-color:#b81f32;color:#fff">Đặt hàng</button>
+            </form>
+
+        </div>
+    </div>
+
+</div>

@@ -1,10 +1,11 @@
 ﻿using Microsoft.Extensions.Hosting;
 using trasua_web_mvc.Infracstructures;
 using trasua_web_mvc.Infracstructures.Entities;
+using trasua_web_mvc.Repositories.Implementation;
 
 namespace trasua_web_mvc.Repositories
 {
-    public class ProductRepository
+    public class ProductRepository:IRepository<Product>
     {
         private readonly TraSuaContext _context;
 
@@ -13,23 +14,23 @@ namespace trasua_web_mvc.Repositories
             _context = context;
         }
 
-        public void AddProduct(Product product)
+        public void Add(Product product)
         {
             _context.Product.Add(product);
         }
 
-        public IQueryable<Product> AllProduct()
+        public IQueryable<Product> GetAll()
         {
             IQueryable<Product> query = _context.Product.AsQueryable();
             return query;
         }
 
-        public void DeleteProduct(Product product)
+        public void Delete(Product product)
         {
             _context.Product.Remove(product);
         }
 
-        public void UpdateProduct(Product product)
+        public void Update(Product product)
         {
             _context.Entry(product).State = Microsoft.EntityFrameworkCore.EntityState.Modified;
         }

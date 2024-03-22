@@ -73,13 +73,13 @@ namespace trasua_web_mvc.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<DateTime>("CreateAt")
+                    b.Property<DateTime?>("CreateAt")
                         .HasColumnType("datetime2");
 
                     b.Property<int?>("CustomerId")
                         .HasColumnType("int");
 
-                    b.Property<DateTime>("LastUpdate")
+                    b.Property<DateTime?>("LastUpdate")
                         .HasColumnType("datetime2");
 
                     b.HasKey("Id");
@@ -102,8 +102,7 @@ namespace trasua_web_mvc.Migrations
                     b.Property<int>("CartId")
                         .HasColumnType("int");
 
-                    b.Property<int?>("ProductId")
-                        .IsRequired()
+                    b.Property<int>("ProductId")
                         .HasColumnType("int");
 
                     b.Property<int>("Quantity")
@@ -154,19 +153,21 @@ namespace trasua_web_mvc.Migrations
                     b.Property<int>("CustomerId")
                         .HasColumnType("int");
 
-                    b.Property<string>("PaymentStatus")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<int>("PromotionId")
+                    b.Property<int>("PaymentId")
                         .HasColumnType("int");
 
-                    b.Property<long>("Total")
+                    b.Property<int?>("PromotionId")
+                        .IsRequired()
+                        .HasColumnType("int");
+
+                    b.Property<long?>("Total")
                         .HasColumnType("bigint");
 
                     b.HasKey("Id");
 
                     b.HasIndex("CustomerId");
+
+                    b.HasIndex("PaymentId");
 
                     b.HasIndex("PromotionId");
 
@@ -190,7 +191,7 @@ namespace trasua_web_mvc.Migrations
                     b.Property<int>("Quantity")
                         .HasColumnType("int");
 
-                    b.Property<int>("TotalPrice")
+                    b.Property<int?>("TotalPrice")
                         .HasColumnType("int");
 
                     b.Property<int>("UnitPrice")
@@ -198,12 +199,31 @@ namespace trasua_web_mvc.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("OrderId");
-
-                    b.HasIndex("ProductId")
-                        .IsUnique();
-
+                    b.HasIndex("OrderId").IsUnique(false);
                     b.ToTable("OrderDetail", (string)null);
+                });
+
+            modelBuilder.Entity("trasua_web_mvc.Infracstructures.Entities.Payment", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<int>("Amount")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("PaymentDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Title")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Payment");
                 });
 
             modelBuilder.Entity("trasua_web_mvc.Infracstructures.Entities.Product", b =>
@@ -349,6 +369,12 @@ namespace trasua_web_mvc.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
+                    b.HasOne("trasua_web_mvc.Infracstructures.Entities.Payment", "Payment")
+                        .WithMany("Orders")
+                        .HasForeignKey("PaymentId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
                     b.HasOne("trasua_web_mvc.Infracstructures.Entities.Promotion", "Promotion")
                         .WithMany("Order")
                         .HasForeignKey("PromotionId")
@@ -356,6 +382,8 @@ namespace trasua_web_mvc.Migrations
                         .IsRequired();
 
                     b.Navigation("Customer");
+
+                    b.Navigation("Payment");
 
                     b.Navigation("Promotion");
                 });
@@ -369,8 +397,8 @@ namespace trasua_web_mvc.Migrations
                         .IsRequired();
 
                     b.HasOne("trasua_web_mvc.Infracstructures.Entities.Product", "Product")
-                        .WithOne("OrderDetail")
-                        .HasForeignKey("trasua_web_mvc.Infracstructures.Entities.OrderDetail", "ProductId")
+                        .WithMany()
+                        .HasForeignKey("ProductId")
                         .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
@@ -410,12 +438,14 @@ namespace trasua_web_mvc.Migrations
                     b.Navigation("OrderDetails");
                 });
 
+            modelBuilder.Entity("trasua_web_mvc.Infracstructures.Entities.Payment", b =>
+                {
+                    b.Navigation("Orders");
+                });
+
             modelBuilder.Entity("trasua_web_mvc.Infracstructures.Entities.Product", b =>
                 {
                     b.Navigation("CartItem")
-                        .IsRequired();
-
-                    b.Navigation("OrderDetail")
                         .IsRequired();
                 });
 

@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
+using Microsoft.EntityFrameworkCore;
 using System.Text;
 using trasua_web_mvc.CommonData;
 using trasua_web_mvc.Dtos;
@@ -16,18 +17,20 @@ namespace trasua_web_mvc.Controllers
         private readonly TraSuaContext _context;
         private Worker _worker;
         private readonly IWebHostEnvironment _webHostEnvironment;
+        private readonly IConfiguration _configuration;
 
-        public AdminController(TraSuaContext context, IWebHostEnvironment webHostEnvironment)
+        public AdminController(TraSuaContext context, IWebHostEnvironment webHostEnvironment, IConfiguration configuration)
         {
             _context = context;
             _webHostEnvironment = webHostEnvironment;
-            _worker = new Worker(_context);
+            _configuration = configuration;
+            _worker = new Worker(_context, _configuration);
         }
 
         public IActionResult Index()
         {
-            var listProduct = _worker.productRepository.AllProduct();
-            return View();
+            var listProduct = _worker.productRepository.GetAll();
+            return View(listProduct);
         }
 
         public ActionResult CreateProduct()
@@ -66,7 +69,8 @@ namespace trasua_web_mvc.Controllers
                     Thumbnail = folder,
                     Price = createProductDto.Price
                 };
-                _worker.productRepository.AddProduct(newProduct);
+
+                _worker.productRepository.Add(newProduct);
                 _worker.productRepository.SaveChanges();
 
             }
@@ -208,7 +212,7 @@ namespace trasua_web_mvc.Controllers
                 initProduct.Thumbnail = folder;
                 initProduct.CategoryId = createProductDto.CategoryId;
 
-                _worker.productRepository.AddProduct(initProduct);
+                _worker.productRepository.Add(initProduct);
                 _context.SaveChanges();
             }
             return RedirectToAction("productManager", "Admin");
@@ -217,7 +221,7 @@ namespace trasua_web_mvc.Controllers
 
         public IActionResult ProductManager()
         {
-            return View(_worker.productRepository.AllProduct());
+            return View(_worker.productRepository.GetAll());
         }
         public IActionResult UserManager()
         {
@@ -236,6 +240,15 @@ namespace trasua_web_mvc.Controllers
         public IActionResult OrderManager()
         {
             return View();
+        }
+     
+        public async Task<Order> GetOrder(int orderId)
+        {
+            return await _context.Order
+                .Include(o => o.OrderDetails)
+                .ThenInclude(orderDetail => orderDetail.Product)
+                .FirstOrDefaultAsync(x => x.Id == orderId)
+                    ?? throw new Exception("Order not found");
         }
 
     }

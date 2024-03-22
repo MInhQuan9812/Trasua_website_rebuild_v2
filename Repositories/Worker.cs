@@ -1,18 +1,24 @@
 ﻿using trasua_web_mvc.Infracstructures;
+using trasua_web_mvc.Services;
 
 namespace trasua_web_mvc.Repositories
 {
     public class Worker
     {
+        private readonly IConfiguration _configuration;
         private readonly TraSuaContext _context;
         private UserRepository _userRepository;
-        private ProductRepository _productRepository;
+        private  ProductRepository _productRepository;
         private CategoryRepository _categoryRepository;
         private CartRepository _cartRepository;
-        public Worker(TraSuaContext context)
+        private PaymentRepository _paymentRepository;
+        public IPaypallService PaypallService { get; private set; }
+
+        public Worker(TraSuaContext context,IConfiguration configuration)
         {
             _context = context;
-
+            _configuration = configuration;
+            PaypallService = new PaypalService(_configuration);
         }
 
         public UserRepository userRepository
@@ -21,25 +27,23 @@ namespace trasua_web_mvc.Repositories
             {
                 if (_userRepository == null)
                 {
-                    if (_context != null)
-                    {
-                        _userRepository = new UserRepository(_context);
-                    }
+
+                    _userRepository = new UserRepository(_context);
+
                 }
                 return _userRepository;
             }
         }
 
-        public ProductRepository productRepository
+        public  ProductRepository productRepository
         {
             get
             {
                 if (_productRepository == null)
                 {
-                    if (_context != null)
-                    {
-                        _productRepository = new ProductRepository(_context);
-                    }
+                    
+                    _productRepository = new ProductRepository(_context);
+
                 }
                 return _productRepository;
             }
@@ -51,10 +55,9 @@ namespace trasua_web_mvc.Repositories
             {
                 if (_categoryRepository == null)
                 {
-                    if (_context != null)
-                    {
-                        _categoryRepository = new CategoryRepository(_context);
-                    }
+
+                    _categoryRepository = new CategoryRepository(_context);
+
                 }
                 return _categoryRepository;
             }
@@ -66,12 +69,26 @@ namespace trasua_web_mvc.Repositories
             {
                 if (_cartRepository == null)
                 {
-                    if (_context != null)
-                    {
-                        _cartRepository = new CartRepository(_context);
-                    }
+
+                    _cartRepository = new CartRepository(_context, _configuration);
+
                 }
                 return _cartRepository;
+
+            }
+        }
+
+        public PaymentRepository paymentRepository
+        {
+            get
+            {
+                if (_paymentRepository == null)
+                {
+
+                    _paymentRepository = new PaymentRepository(_context);
+
+                }
+                return _paymentRepository;
 
             }
         }
