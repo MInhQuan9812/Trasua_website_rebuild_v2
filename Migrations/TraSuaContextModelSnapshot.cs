@@ -135,6 +135,48 @@ namespace trasua_web_mvc.Migrations
                     b.ToTable("Category");
                 });
 
+            modelBuilder.Entity("trasua_web_mvc.Infracstructures.Entities.Option", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Option");
+                });
+
+            modelBuilder.Entity("trasua_web_mvc.Infracstructures.Entities.OptionValue", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<int>("OptionId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("Price")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Value")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("OptionId");
+
+                    b.ToTable("OptionValue");
+                });
+
             modelBuilder.Entity("trasua_web_mvc.Infracstructures.Entities.Order", b =>
                 {
                     b.Property<int>("Id")
@@ -199,7 +241,10 @@ namespace trasua_web_mvc.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("OrderId").IsUnique(false);
+                    b.HasIndex("OrderId");
+
+                    b.HasIndex("ProductId");
+
                     b.ToTable("OrderDetail", (string)null);
                 });
 
@@ -249,7 +294,6 @@ namespace trasua_web_mvc.Migrations
                         .HasColumnType("int");
 
                     b.Property<string>("Thumbnail")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
@@ -257,6 +301,34 @@ namespace trasua_web_mvc.Migrations
                     b.HasIndex("CategoryId");
 
                     b.ToTable("Product", (string)null);
+                });
+
+            modelBuilder.Entity("trasua_web_mvc.Infracstructures.Entities.ProductOptionValue", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<int>("OptionId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("OptionValueId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("ProductId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("OptionId");
+
+                    b.HasIndex("OptionValueId");
+
+                    b.HasIndex("ProductId");
+
+                    b.ToTable("ProductOptionValue", (string)null);
                 });
 
             modelBuilder.Entity("trasua_web_mvc.Infracstructures.Entities.Promotion", b =>
@@ -361,6 +433,17 @@ namespace trasua_web_mvc.Migrations
                     b.Navigation("Product");
                 });
 
+            modelBuilder.Entity("trasua_web_mvc.Infracstructures.Entities.OptionValue", b =>
+                {
+                    b.HasOne("trasua_web_mvc.Infracstructures.Entities.Option", "Option")
+                        .WithMany()
+                        .HasForeignKey("OptionId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Option");
+                });
+
             modelBuilder.Entity("trasua_web_mvc.Infracstructures.Entities.Order", b =>
                 {
                     b.HasOne("trasua_web_mvc.Infracstructures.Entities.User", "Customer")
@@ -418,6 +501,33 @@ namespace trasua_web_mvc.Migrations
                     b.Navigation("Category");
                 });
 
+            modelBuilder.Entity("trasua_web_mvc.Infracstructures.Entities.ProductOptionValue", b =>
+                {
+                    b.HasOne("trasua_web_mvc.Infracstructures.Entities.Option", "Option")
+                        .WithMany("ProductOptionValues")
+                        .HasForeignKey("OptionId")
+                        .OnDelete(DeleteBehavior.ClientNoAction)
+                        .IsRequired();
+
+                    b.HasOne("trasua_web_mvc.Infracstructures.Entities.OptionValue", "OptionValue")
+                        .WithMany("ProductOptionValues")
+                        .HasForeignKey("OptionValueId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("trasua_web_mvc.Infracstructures.Entities.Product", "Product")
+                        .WithMany("ProductOptionValues")
+                        .HasForeignKey("ProductId")
+                        .OnDelete(DeleteBehavior.ClientNoAction)
+                        .IsRequired();
+
+                    b.Navigation("Option");
+
+                    b.Navigation("OptionValue");
+
+                    b.Navigation("Product");
+                });
+
             modelBuilder.Entity("trasua_web_mvc.Infracstructures.Entities.Area", b =>
                 {
                     b.Navigation("Branches");
@@ -431,6 +541,16 @@ namespace trasua_web_mvc.Migrations
             modelBuilder.Entity("trasua_web_mvc.Infracstructures.Entities.Category", b =>
                 {
                     b.Navigation("Product");
+                });
+
+            modelBuilder.Entity("trasua_web_mvc.Infracstructures.Entities.Option", b =>
+                {
+                    b.Navigation("ProductOptionValues");
+                });
+
+            modelBuilder.Entity("trasua_web_mvc.Infracstructures.Entities.OptionValue", b =>
+                {
+                    b.Navigation("ProductOptionValues");
                 });
 
             modelBuilder.Entity("trasua_web_mvc.Infracstructures.Entities.Order", b =>
@@ -447,6 +567,8 @@ namespace trasua_web_mvc.Migrations
                 {
                     b.Navigation("CartItem")
                         .IsRequired();
+
+                    b.Navigation("ProductOptionValues");
                 });
 
             modelBuilder.Entity("trasua_web_mvc.Infracstructures.Entities.Promotion", b =>

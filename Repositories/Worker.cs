@@ -8,17 +8,14 @@ namespace trasua_web_mvc.Repositories
         private readonly IConfiguration _configuration;
         private readonly TraSuaContext _context;
         private UserRepository _userRepository;
-        private  ProductRepository _productRepository;
+        private ProductRepository _productRepository;
         private CategoryRepository _categoryRepository;
         private CartRepository _cartRepository;
         private PaymentRepository _paymentRepository;
-        public IPaypallService PaypallService { get; private set; }
-
-        public Worker(TraSuaContext context,IConfiguration configuration)
+        public Worker(TraSuaContext context, IConfiguration configuration)
         {
             _context = context;
             _configuration = configuration;
-            PaypallService = new PaypalService(_configuration);
         }
 
         public UserRepository userRepository
@@ -35,13 +32,13 @@ namespace trasua_web_mvc.Repositories
             }
         }
 
-        public  ProductRepository productRepository
+        public ProductRepository productRepository
         {
             get
             {
                 if (_productRepository == null)
                 {
-                    
+
                     _productRepository = new ProductRepository(_context);
 
                 }
@@ -92,6 +89,8 @@ namespace trasua_web_mvc.Repositories
 
             }
         }
+
+
 
 
     }

@@ -21,6 +21,11 @@ namespace trasua_web_mvc.Infracstructures
         public DbSet<OrderDetail> OrderDetail { get; set; }
         public DbSet<Promotion> Promotion { get; set; }
         public DbSet<Payment> Payment { get; set; }
+        public DbSet<Option> Option { get; set; }
+        public DbSet<ProductOptionValue> ProductOptionValue { get; set; }
+        public DbSet<OptionValue> OptionValue { get; set; }
+
+
 
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -32,6 +37,8 @@ namespace trasua_web_mvc.Infracstructures
             ConfigureBranch(modelBuilder);
             ConfigureOrderModel(modelBuilder);
             ConfigureOrderDetaill(modelBuilder);
+            ConfigureProductOptionValue(modelBuilder);
+
         }
 
         private void ConfigureUserModel(ModelBuilder modelBuilder)
@@ -56,7 +63,6 @@ namespace trasua_web_mvc.Infracstructures
                 .HasOne(x => x.Category)
                 .WithMany(x => x.Product)
                 .HasForeignKey(x => x.CategoryId);
-
         }
 
         private void ConfigureOrderModel(ModelBuilder modelBuilder)
@@ -89,7 +95,7 @@ namespace trasua_web_mvc.Infracstructures
 
             modelBuilder.Entity<OrderDetail>()
                 .HasIndex(x => x.OrderId);
- 
+
             modelBuilder.Entity<OrderDetail>()
                 .HasOne(x => x.Order)
                 .WithMany(x => x.OrderDetails)
@@ -107,12 +113,6 @@ namespace trasua_web_mvc.Infracstructures
             modelBuilder.Entity<Cart>()
                 .ToTable(nameof(Cart))
                 .HasKey(e => e.Id);
-
-            //modelBuilder.Entity<Cart>()
-            //    .HasOne(x => x.Customer)
-            //    .WithOne(x => x.Cart)
-            //    .HasForeignKey<Cart>(x => x.CustomerId)
-            //    .IsRequired();
         }
 
         private void ConfigureCartItem(ModelBuilder modelBuilder)
@@ -130,7 +130,6 @@ namespace trasua_web_mvc.Infracstructures
                 .HasOne(x => x.Product)
                 .WithOne(x => x.CartItem)
                 .HasForeignKey<CartItem>(x => x.ProductId);
-                
         }
 
         public void ConfigureBranch(ModelBuilder modelBuilder)
@@ -144,7 +143,43 @@ namespace trasua_web_mvc.Infracstructures
                .HasForeignKey(x => x.AreaId);
         }
 
+        public void ConfigureProductOptionValue(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<ProductOptionValue>()
+                .ToTable(nameof(ProductOptionValue))
+                .HasKey(x=>x.Id);
 
+            modelBuilder.Entity<ProductOptionValue>()
+                .HasOne(x => x.Product)
+                .WithMany(x => x.ProductOptionValues)
+                .HasForeignKey(x => x.ProductId)
+                .OnDelete(DeleteBehavior.ClientNoAction);
+
+
+            modelBuilder.Entity<ProductOptionValue>()
+                .HasOne(x => x.Option)
+                .WithMany(x => x.ProductOptionValues)
+                .HasForeignKey(x => x.OptionId)
+                .OnDelete(DeleteBehavior.ClientNoAction);
+
+
+            modelBuilder.Entity<ProductOptionValue>()
+                .HasOne(x => x.OptionValue)
+                .WithMany(x => x.ProductOptionValues)
+                .HasForeignKey(x => x.OptionValueId);
+        }
+
+        //public void ConfigureOptionValue(ModelBuilder modelBuilder)
+        //{
+        //    modelBuilder.Entity<OptionValue>()
+        //        .ToTable(nameof(OptionValue))
+        //        .HasKey(e => e.Id);
+
+        //    modelBuilder.Entity<OptionValue>()
+        //        .HasOne(x => x.Option)
+        //        .WithMany(x => x.OptionValues)
+        //        .HasForeignKey(x => x.OptionId);
+        //}
 
     }
 }

@@ -43,14 +43,7 @@ namespace trasua_web_mvc.Controllers
                     return RedirectToAction(nameof(Index));
                 }
 
-                //int _amount = amount/25000;
-                //string returnUrl = "https://localhost:7217/Payment/Success";
-                //string cancelUrl = "https://localhost:7217/Cart/";
-
-                //var createdPayment = await _worker.PaypallService.CreateOrderAsync(_amount, returnUrl, cancelUrl);
-
-                //string approvalUrl = createdPayment.links.FirstOrDefault(x => x.rel.ToLower() == "approval_url")?.href;
-                string approvalUrl = await ServiceFacade.Instance().PaymentWithPaypall(amount);
+                string approvalUrl = await ServiceFacade.Instance(_configuration).PaymentWithPaypall(amount);
                 if (!string.IsNullOrEmpty(approvalUrl))
                 {
                     return Redirect(approvalUrl);

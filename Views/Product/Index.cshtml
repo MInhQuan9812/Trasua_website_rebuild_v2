@@ -41,17 +41,17 @@
                         } *@
                         @await Component.InvokeAsync(typeof(CategoryPartial));
                     </div>
-                    @using (Html.BeginForm("Index", "Products", FormMethod.Get))
+                    @using (Html.BeginForm("Index", "Product", FormMethod.Get))
                     {
                         <table>
                             <tr>
                                 <td>
-                                    Tên Sản phẩm : <input type="text" name="SearchString" />
+                                    Tên Sản phẩm : <input type="text" name="keyword" />
                                     <input type="submit" value="Tìm kiếm" class="btn btn-warning" />
                                 </td>
                                 <td>
-                                    Đơn giá từ : <input type="number" min="0" value="0" name="min" />
-                                    Đến : <input type="number" name="max" min="0" value="0" />
+                                    Đơn giá từ : <input type="number" min="0" value="0" name="minPrice" />
+                                    Đến : <input type="number" name="maxPrice" min="0" value="0" />
                                     <input type="submit" value="Tìm giá" class="btn btn-info" />
                                 </td>
                             </tr>
@@ -83,7 +83,7 @@
                                 </div>
                                 <div class="item-info">
                                     <div>
-                                        <a href="/Products/Details/@Html.DisplayFor(modelItem => item.Id)">
+                                        <a href="/Product/Detail?id=@item.Id">
                                             <h3>
                                                 @Html.DisplayFor(modelItem => item.Description)
                                             </h3>

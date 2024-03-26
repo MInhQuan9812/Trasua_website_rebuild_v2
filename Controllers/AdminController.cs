@@ -218,7 +218,13 @@ namespace trasua_web_mvc.Controllers
             return RedirectToAction("productManager", "Admin");
         }
 
+        //Template Method
+        public ActionResult CreateOrder()
+        {
+            return View();
+        }
 
+            
         public IActionResult ProductManager()
         {
             return View(_worker.productRepository.GetAll());

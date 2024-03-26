@@ -1,0 +1,153 @@
+﻿@model trasua_web_mvc.Dtos.ProductDetailDto
+
+@{
+    ViewBag.Title = "Login";
+    Layout = "~/Pages/Shared/_Layout.cshtml";
+}
+
+<style>
+    .icon-hover:hover {
+        border-color: #3b71ca !important;
+        background-color: white !important;
+        color: #3b71ca !important;
+    }
+
+        .icon-hover:hover i {
+            color: #3b71ca !important;
+        }
+</style>
+
+<!-- content -->
+<section class="py-5">
+    <div class="container">
+        <form action="AddDetailItem" method="post" enctype="multipart/form-data">
+            <div class="row gx-5">
+                <aside class="col-lg-6">
+                    <div class="border rounded-4 mb-3 d-flex justify-content-center">
+                    </div>
+                    <
+                    <div class="d-flex justify-content-center mb-3 form-group">
+                        <a data-fslightbox="mygalley" class="border mx-1 rounded-2 form-group" target="_blank" data-type="image" href="" class="item-thumb">
+                            <img width="500" height="500" class="rounded-2" name="Thumbnail" src="/@Model.Thumbnail" />
+                        </a>
+                    </div>
+
+                </aside>
+                <main class="col-lg-6">
+                    <div class="ps-lg-3">
+                        <h4 class="title text-dark form-group">
+                            @Html.EditorFor(model => model.Name, new { htmlAttributes = new { @class = "form-control" } })
+                        </h4>
+                        <div class="d-flex flex-row my-3">
+                            <div class="text-warning mb-1 me-2">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                                <span class="ms-1">
+                                    4.5
+                                </span>
+                            </div>
+                            <span class="text-muted"><i class="fas fa-shopping-basket fa-sm mx-1"></i>154 orders</span>
+                            <span class="text-success ms-2">In stock</span>
+                        </div>
+
+                        <div class="mb-3 form-group">
+                            <span class="h5">@Html.EditorFor(model => model.Price, new { htmlAttributes = new { @class = "form-control" } })</span>
+                            <span class="text-muted"> /VND</span>
+                        </div>
+
+                        <p class="form-group">
+                            @Html.EditorFor(model => model.Description, new { htmlAttributes = new { @class = "form-control" } })
+                        </p>
+                        <dt class="col-3">Topping</dt>
+                        <div class="row">
+                            @if (Model.Toppings != null)
+                            {
+                                for (int i = 0; i < Model.Toppings.Count; i++)
+                                {
+                                    <div>
+                                        @Html.HiddenFor(m => m.Toppings[i].Id)
+                                        @Html.HiddenFor(m => m.Toppings[i].LabelName)
+                                        @Html.HiddenFor(m => m.Toppings[i].Price)
+                                        @Html.CheckBoxFor(m => m.Toppings[i].IsChecked)
+                                        @Html.LabelFor(m => m.Toppings[i].IsChecked, Model.Toppings[i].LabelName +" +"+Model.Toppings[i].Price )
+                                    </div>
+                                }
+                            }
+                        </div>
+                        <hr />
+
+                        <div class="row mb-4 form-group">
+                            <div class="col-md-4 col-6">
+                                <dt class="col-3">Size</dt>
+                                <select class="form-control border border-secondary" style="height: 35px;" name="SizeId">
+                                    @foreach (var item in Model.Sizes)
+                                    {
+                                        <option value="@item.Id">@item.LabelName        +@item.Price</option>
+                                    }
+                                </select>
+                            </div>
+                        </div>
+                        <div class="payment-options form-group">
+                            <p><strong>Đá</strong></p>
+                            @foreach (var item in Model.Ingredients)
+                            {
+                                <label><input type="radio" name="IngredientId" value="@item.Value">@item.Text</label>
+                            }
+                        </div>
+                        <div class="row mb-4 form-group">
+                            <p><strong>Số lượng</strong></p>
+                            <div class="input-group mb-3" style="width: 170px;">
+                                <button class="btn btn-white border border-secondary px-3" type="button" id="minusBtn" data-mdb-ripple-color="dark">
+                                    <i class="fas fa-minus"></i>
+                                </button>
+                                <input type="text" class="form-control text-center border border-secondary" name="Quantity" id="quantity" value="@Model.Quantity" aria-label="Example text with button addon" aria-describedby="button-addon1" />
+                                <button class="btn btn-white border border-secondary px-3" type="button" id="plusBtn" data-mdb-ripple-color="dark">
+                                    <i class="fas fa-plus"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <a href="#" class="btn btn-warning shadow-0" style="background-color: #b81f32;color:white">Mua ngay </a>
+                        <button id="btnSubmit" type="submit" class="btn btn-primary shadow-0" style="background-color: #b81f32;color:white"> <i class="me-1 fa fa-shopping-basket"></i> Thêm vào giỏ hàng</button>
+                    </div>
+                </main>
+            </div>
+        </form>
+
+    </div>
+</section>
+<script>
+    document.getElementById("plusBtn").addEventListener("click", function () {
+        var quantityField = document.getElementById("quantity");
+        var quantity = parseInt(quantityField.value);
+        quantityField.value = quantity + 1;
+    @Model.Quantity=quantity + 1;
+    });
+
+    document.getElementById("minusBtn").addEventListener("click", function () {
+        var quantityField = document.getElementById("quantity");
+        var quantity = parseInt(quantityField.value);
+        if (quantity > 1) {
+            quantityField.value = quantity - 1;
+    @Model.Quantity=quantity - 1;
+        }
+    });
+
+                // $(document).ready(function () {
+                //     $('#btnSubmit').on('click', function () {
+                //         $.ajax({
+                //             url: '/Product/Detail',
+                //             type: 'POST',
+                //             data: $('#CoursesForm').serialize(),
+                //             success: function (response) {
+                //                 console.log('Success');
+                //             },
+                //             error: function (xhr) {
+                //                 console.log(xhr);
+                //             }
+                //         })
+                //     });
+                // });
+</script>

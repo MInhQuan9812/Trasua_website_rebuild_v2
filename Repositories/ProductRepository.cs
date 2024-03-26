@@ -8,10 +8,12 @@ namespace trasua_web_mvc.Repositories
     public class ProductRepository:IRepository<Product>
     {
         private readonly TraSuaContext _context;
-
+        private Worker _worker;
+        private readonly IConfiguration _configuration;
         public ProductRepository(TraSuaContext context)
         {
             _context = context;
+            _worker = new Worker(context, _configuration);
         }
 
         public void Add(Product product)

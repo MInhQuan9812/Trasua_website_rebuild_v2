@@ -5,24 +5,21 @@ namespace trasua_web_mvc.Infracstructures.Facade
 {
     public class ServiceFacade
     {
-        private static readonly IConfiguration _configuration;
         public static ServiceFacade _instance;
-
         private PaypalService _paypalService;
         private EmailService _emailService;
-
 
         private ServiceFacade(IConfiguration configuration)
         {
             _paypalService = new PaypalService(configuration);
         }
 
-        public static ServiceFacade Instance()
+        public static ServiceFacade Instance(IConfiguration configuration)
         {
             
             if(_instance == null)
             {
-                _instance = new ServiceFacade(_configuration);
+                _instance = new ServiceFacade(configuration);
             }
             return _instance;
         }
@@ -37,8 +34,12 @@ namespace trasua_web_mvc.Infracstructures.Facade
 
             string approvalUrl = createdPayment.links.FirstOrDefault(x => x.rel.ToLower() == "approval_url")?.href;
 
-            return await Task.FromResult(approvalUrl);
-            
+            return await Task.FromResult(approvalUrl);        
+        }
+
+        public async Task RecoveryPasswordWithEmail()
+        {
+
         }
     }
 }

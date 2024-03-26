@@ -4,18 +4,16 @@ using trasua_web_mvc.CommonData;
 using trasua_web_mvc.Dtos;
 using trasua_web_mvc.Infracstructures;
 using trasua_web_mvc.Infracstructures.Entities;
+using trasua_web_mvc.Infracstructures.Observer;
 using trasua_web_mvc.Repositories;
 
 namespace trasua_web_mvc.Controllers
 {
     public class CartController : Controller
     {
-
         private readonly TraSuaContext _context;
         private Worker _worker;
         private readonly IConfiguration _configuration;
-
-
         public CartController(TraSuaContext context, IConfiguration configuration)
         {
             _context = context;
@@ -26,18 +24,24 @@ namespace trasua_web_mvc.Controllers
         public async Task<IActionResult> Index()
         {
             var user = _context.User.Where(x => x.UserName.Equals(User.Identity.Name)).FirstOrDefault();
-            var cart = await _worker.cartRepository.GetUserCart(user.Id);
+            var cart = await _worker.cartRepository.GetUserCart(user.Id);           
             return View(cart);
         }
 
 
         public async Task<IActionResult> AddItem(int productId)
         {
+            var notifyService = new NotityService();
+            _worker.cartRepository.Attach(notifyService);
             var user = _context.User.Where(x => x.UserName.Equals(User.Identity.Name)).FirstOrDefault();
-            var cartCount = await _worker.cartRepository.AddItem(productId, user.Id, 1);
-            return RedirectToAction("Index", "Cart");
 
+            await _worker.cartRepository.AddItem(productId, user.Id, 1, null);
+
+            ConfigAlert(_worker.cartRepository.AlertMessage);
+
+            return RedirectToAction("Index", "Cart");
         }
+
 
         public async Task<ActionResult> Checkout()
         {
@@ -86,6 +90,11 @@ namespace trasua_web_mvc.Controllers
             var removedItem = await _worker.cartRepository.RemoveItem(user.Id, productId);
             return RedirectToAction("Index", "Cart");
         }
+        protected void ConfigAlert(string message)
+        {
+            TempData["AlertMessage"] = message;         
+        }
+
 
     }
 }

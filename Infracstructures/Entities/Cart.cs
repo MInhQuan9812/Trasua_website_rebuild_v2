@@ -1,9 +1,12 @@
 ﻿using Microsoft.Extensions.Configuration.UserSecrets;
 using System.ComponentModel.DataAnnotations;
+using System.Text;
+using trasua_web_mvc.Infracstructures.Decorator;
+using trasua_web_mvc.Infracstructures.Factory;
 
 namespace trasua_web_mvc.Infracstructures.Entities
 {
-    public class Cart
+    public class Cart 
     {
         [Key]
         public int Id { get; set; }
