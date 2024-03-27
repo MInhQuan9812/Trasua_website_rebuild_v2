@@ -123,6 +123,7 @@ namespace trasua_web_mvc.Controllers
                 .ThenInclude(orderDetail => orderDetail.Product)
                 .Include(x=>x.Payment)
                 .Where(o => o.CustomerId == user.Id)
+                .OrderByDescending(o => o.Created)
                 .ToListAsync();
 
             return View(order);

@@ -1,8 +1,9 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using trasua_web_mvc.Infracstructures.Decorator;
 
 namespace trasua_web_mvc.Infracstructures.Entities
 {
-    public class Order
+    public class Order:IOrder
     {
         [Key]
         public int Id { get; set; }
@@ -20,5 +21,10 @@ namespace trasua_web_mvc.Infracstructures.Entities
         public virtual Promotion Promotion { get; set; }
 
         public virtual Payment Payment { get; set; }
+
+        public long? GetTotalPrice()
+        {
+            return Total;
+        }
     }
 }

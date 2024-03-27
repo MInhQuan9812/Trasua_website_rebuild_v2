@@ -34,6 +34,7 @@ namespace trasua_web_mvc.Controllers
         {
             var notifyService = new NotityService();
             _worker.cartRepository.Attach(notifyService);
+
             var user = _context.User.Where(x => x.UserName.Equals(User.Identity.Name)).FirstOrDefault();
 
             await _worker.cartRepository.AddItem(productId, user.Id, 1, null);
@@ -72,6 +73,7 @@ namespace trasua_web_mvc.Controllers
                     paymentStrategy = new DirectPaymentStrategy(_context, _configuration);
                     var paymentContext = new PaymentContext(paymentStrategy);
                     await paymentContext.ProcessOrderPayment(user.Id,checkoutDto);
+
                     return RedirectToAction("Index", "Home");
                 }
                 catch (Exception ex)
@@ -84,6 +86,7 @@ namespace trasua_web_mvc.Controllers
                 paymentStrategy = new PaypallPaymentStrategy(_context, _configuration);
                 var paymentContext= new PaymentContext(paymentStrategy);
                 await paymentContext.ProcessOrderPayment(user.Id, checkoutDto);
+
                 return RedirectToAction("RedirectApprovalUrl", "Payment", new { url = await paymentStrategy.GetApprovalUrl()});
             }
         }
@@ -97,6 +100,8 @@ namespace trasua_web_mvc.Controllers
             var removedItem = await _worker.cartRepository.RemoveItem(user.Id, productId);
             return RedirectToAction("Index", "Cart");
         }
+
+
         protected void ConfigAlert(string message)
         {
             TempData["AlertMessage"] = message;         

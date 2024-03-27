@@ -1,0 +1,34 @@
+﻿@model trasua_web_mvc.Dtos.CreateCategoryDto;
+
+@{
+    ViewBag.Title = "Thêm loại sản phẩm";
+    Layout = "~/Pages/Shared/_AdminLayout.cshtml";
+}
+
+<div class="pd-ltr-20">
+
+
+    <div class="card-box mb-30">
+        <div class="container">
+            <h2 class="my-4">Thêm loại sản phẩm</h2>
+            <form action="createCategory" method="POST" enctype="multipart/form-data">
+                <div class="form-group">
+                    <label for="username">Tên loại</label>
+                    @Html.EditorFor(model => model.Name, new { htmlAttributes = new { @class = "form-control" } })
+                </div>
+
+                <div class="form-group">
+                    <label for="drinkImage">Hình Ảnh:</label>
+                    @* <img src="/@Model.Avatar"
+                    width="70"
+                    height="70"
+                    alt="" /> *@
+                    <input type="file" class="form-control-file" id="drinkImage" name="Avatar_Upload">
+                </div>
+                <button type="submit" class="btn btn-primary">Thêm</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+

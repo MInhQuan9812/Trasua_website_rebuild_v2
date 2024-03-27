@@ -2,9 +2,7 @@
 {
     public interface IOrder
     {
-        string GetName();
-        string GetDescription();
-        int GetPrice();
+        long? GetTotalPrice();
 
     }
 }

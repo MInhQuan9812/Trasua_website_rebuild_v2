@@ -45,7 +45,6 @@ namespace trasua_web_mvc.Controllers
         [HttpPost]
         public async Task<IActionResult> CreateProduct(CreateProductDto createProductDto)
         {
-            List<Category> categoryList = new List<Category>();
             if (ModelState.IsValid)
             {
                 string folder = "upload/cover/";
@@ -77,6 +76,37 @@ namespace trasua_web_mvc.Controllers
             return RedirectToAction("productManager", "Admin");
 
         }
+        [HttpPost]
+        public async Task<IActionResult> CreateCategory(CreateCategoryDto createCategoryDto)
+        {
+            if (ModelState.IsValid)
+            {
+                Category newPromotion = new Category
+                {
+                    Name = createCategoryDto.Name,
+                    //Thumbnail = folder,
+                };
+
+            }
+            return RedirectToAction("productManager", "Admin");
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> CreatePromotion(CreatePromotionDto createPromotionDto)
+        {
+            if (ModelState.IsValid)
+            {
+                Promotion newPromotion = new Promotion
+                {
+                    Name = createPromotionDto.Name,
+                    Percentdiscount = createPromotionDto.Percentdiscount,
+                    //Thumbnail = folder,
+                };
+
+            }
+            return RedirectToAction("promotionManager", "Admin");
+        }
+
         public ActionResult EditProduct(int id)
         {
             Product product = _worker.productRepository.FindById(id);
@@ -105,6 +135,8 @@ namespace trasua_web_mvc.Controllers
         {
             return View();
         }
+
+
 
         [HttpPost]
         public async Task<IActionResult> CreateUser(EditUserDto createUserDto)
@@ -136,6 +168,8 @@ namespace trasua_web_mvc.Controllers
             }
             return RedirectToAction("userManager", "Admin");
         }
+
+
 
         public ActionResult EditUser(int id)
         {
@@ -224,7 +258,16 @@ namespace trasua_web_mvc.Controllers
             return View();
         }
 
-            
+        public ActionResult CreateCategory()
+        {
+            return View();
+        }
+        public ActionResult CreatePromotion()
+        {
+            return View();
+        }
+
+
         public IActionResult ProductManager()
         {
             return View(_worker.productRepository.GetAll());
@@ -240,12 +283,17 @@ namespace trasua_web_mvc.Controllers
 
         public IActionResult BranchManager()
         {
-            return View();
+            return View(_context.Branch.Include(x=>x.Area).ToList());
         }
 
         public IActionResult OrderManager()
         {
-            return View();
+            var orders = _context.Order.Include(x => x.Customer)
+                .Include(x => x.Payment)
+                .Include(x => x.Promotion)
+            .OrderByDescending(o => o.Created)
+                .ToList();
+            return View(orders);
         }
      
         public async Task<Order> GetOrder(int orderId)
@@ -255,6 +303,12 @@ namespace trasua_web_mvc.Controllers
                 .ThenInclude(orderDetail => orderDetail.Product)
                 .FirstOrDefaultAsync(x => x.Id == orderId)
                     ?? throw new Exception("Order not found");
+        }
+
+        public IActionResult PromotionManager()
+        {
+            return View(_worker.promotionRepository.AllPromotion());
+
         }
 
     }

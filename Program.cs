@@ -38,6 +38,7 @@ builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationSc
 
 //builder.Services.AddScoped<IUserAuthenticationService, UserAuthenticationService>();
 // Configure the HTTP request pipeline.
+
 var app = builder.Build();
 
 if (!app.Environment.IsDevelopment())

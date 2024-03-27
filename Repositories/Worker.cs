@@ -12,6 +12,7 @@ namespace trasua_web_mvc.Repositories
         private CategoryRepository _categoryRepository;
         private CartRepository _cartRepository;
         private PaymentRepository _paymentRepository;
+        private PromotionRepository _promotionRepository;
         public Worker(TraSuaContext context, IConfiguration configuration)
         {
             _context = context;
@@ -89,7 +90,20 @@ namespace trasua_web_mvc.Repositories
 
             }
         }
+        public PromotionRepository promotionRepository
+        {
+            get
+            {
+                if (_promotionRepository == null)
+                {
 
+                    _promotionRepository = new PromotionRepository(_context);
+
+                }
+                return _promotionRepository;
+
+            }
+        }
 
 
 
