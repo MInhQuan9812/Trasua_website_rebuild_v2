@@ -8,9 +8,7 @@
         {
             _discountFixed = discountFixed;
         }
-        public long? GetTotalPrice()
-        {
-            return base.GetTotalPrice() - _discountFixed;
-        }
+        public override long? GetTotalPrice => base.GetTotalPrice - _discountFixed;
+
     }
 }

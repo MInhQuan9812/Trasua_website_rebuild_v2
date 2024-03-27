@@ -156,6 +156,7 @@ namespace trasua_web_mvc.Repositories
 
             var cart = await GetCart(userId)
               ?? throw new Exception("Invalid cart");
+
             var order = new Order
             {
                 CustomerId = userId,
@@ -163,9 +164,21 @@ namespace trasua_web_mvc.Repositories
                 Address = checkoutDto.Address,
                 PaymentId = checkoutDto.PaymentId,
                 PromotionId = checkoutDto.PromotionId,
+                Total=await GetTotalCheckout(userId,checkoutDto)
             };
+            IOrder discountedOrder;
+            var discountValue=_context.Promotion.Where(x=>x.Id==checkoutDto.PromotionId).FirstOrDefault();
+            if (discountValue.Percentdiscount < 100)
+            {
+                discountedOrder = new PercentageDiscountDecorator(order,discountValue.Percentdiscount );
+            }
+            else
+            {
+                discountedOrder = new FixedDiscountDecorator(order, discountValue.Percentdiscount);
+            }
 
-            int? total = 0;
+            order.Total = discountedOrder.GetTotalPrice;
+
 
             foreach (var lineItem in cart.CartItems.ToList())
             {
@@ -178,9 +191,7 @@ namespace trasua_web_mvc.Repositories
                 };
 
                 order.OrderDetails.Add(orderDetail);
-                total += orderDetail.TotalPrice;
             }
-            order.Total = total;
 
             _context.Add(order);
             _context.SaveChanges();

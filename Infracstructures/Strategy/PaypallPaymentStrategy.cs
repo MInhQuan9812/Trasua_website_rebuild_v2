@@ -23,7 +23,7 @@ namespace trasua_web_mvc.Infracstructures.Strategy
         {
             try
             {
-                int amount= await _worker.cartRepository.GetTotalCheckout(userId, checkoutDto);
+                int amount = await _worker.cartRepository.GetTotalCheckout(userId, checkoutDto);
                 ApprovalUrl = await PayUsingPaypal(amount);
                 await _worker.cartRepository.CheckOut(userId, checkoutDto);
                 return true;

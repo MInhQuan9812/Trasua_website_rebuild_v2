@@ -9,9 +9,22 @@
             _discountPercentage=discountPercentage;
         }
 
-        public long? GetTotalPrice()
+        public override long? GetTotalPrice
         {
-            return base.GetTotalPrice() * (1 - _discountPercentage / 100);
+            get
+            {
+                if (base.GetTotalPrice.HasValue && _discountPercentage!=null)
+                {
+                    double discount = _discountPercentage / 100.0;
+                    return (long)(base.GetTotalPrice.Value * (1 - discount));
+                }
+                else
+                {
+                    // Trả về null hoặc giá trị mặc định tùy thuộc vào logic của bạn
+                    return base.GetTotalPrice;
+                }
+            }
         }
+
     }
 }

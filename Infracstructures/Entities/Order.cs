@@ -11,7 +11,7 @@ namespace trasua_web_mvc.Infracstructures.Entities
         public DateTime Created { get; set; }
         public string Address { get; set; }
         public int PaymentId { get; set; }
-        
+
         public long? Total { get; set; }
         public int? PromotionId { get; set; } = 0;
 
@@ -22,9 +22,7 @@ namespace trasua_web_mvc.Infracstructures.Entities
 
         public virtual Payment Payment { get; set; }
 
-        public long? GetTotalPrice()
-        {
-            return Total;
-        }
+        public long? GetTotalPrice => Total;
+
     }
 }

@@ -2,16 +2,13 @@
 {
     public abstract class DiscountDecorator : IOrder
     {
-        protected IOrder _order;
+        protected readonly IOrder _order;
 
         public DiscountDecorator(IOrder order)
         {
             _order= order;
         }
 
-        public virtual long? GetTotalPrice()
-        {
-            return _order.GetTotalPrice();
-        }
+        public virtual long? GetTotalPrice => _order.GetTotalPrice;
     }
 }

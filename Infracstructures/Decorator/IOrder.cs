@@ -2,7 +2,7 @@
 {
     public interface IOrder
     {
-        long? GetTotalPrice();
+        long? GetTotalPrice { get; }
 
     }
 }

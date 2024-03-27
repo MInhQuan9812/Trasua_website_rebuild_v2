@@ -54,7 +54,8 @@ namespace trasua_web_mvc.Controllers
                 FullName = user.FullName,
                 PhoneNumber = user.PhoneNumber,
                 PaymentMethods = OrderData.getPaymentList(_context),
-                CartItems = cart.CartItems.ToList()
+                CartItems = cart.CartItems.ToList(),
+                PromotionApplies=OrderData.getPromotionList(_context),                
             };
             return View(checkoutDto);
         }

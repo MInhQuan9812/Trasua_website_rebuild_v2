@@ -270,7 +270,7 @@ namespace trasua_web_mvc.Controllers
 
         public IActionResult ProductManager()
         {
-            return View(_worker.productRepository.GetAll());
+            return View(_context.Product.Include(x => x.Category).ToList());
         }
         public IActionResult UserManager()
         {
