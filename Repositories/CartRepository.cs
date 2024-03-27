@@ -15,10 +15,11 @@ namespace trasua_web_mvc.Repositories
         private readonly TraSuaContext _context;
         private Worker _worker;
         private readonly IConfiguration _configuration;
-        private List<IObserver> _observers = new List<IObserver>();
 
+        private List<IObserver> _observers = new List<IObserver>();
         public int State { get; set; }
         public string AlertMessage { get; set; }
+
 
         public CartRepository(TraSuaContext context, IConfiguration configuration)
         {
@@ -184,12 +185,12 @@ namespace trasua_web_mvc.Repositories
             _context.Add(order);
             _context.SaveChanges();
         }
-        public async Task<int?> GetTotalCheckout(int userId, CheckoutDto checkoutDto)
+        public async Task<int> GetTotalCheckout(int userId, CheckoutDto checkoutDto)
         {
 
             var cart = await GetCart(userId)
               ?? throw new Exception("Invalid cart");
-            int? total = 0;
+            int total = 0;
 
             foreach (var lineItem in cart.CartItems.ToList())
             {

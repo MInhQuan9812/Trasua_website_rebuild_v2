@@ -34,26 +34,20 @@ namespace trasua_web_mvc.Controllers
         }
 
 
-        public async Task<IActionResult> PayUsingPaypal(int amount)
+        public async Task<IActionResult> RedirectApprovalUrl(string url)
         {
             try
             {
-                if (amount == 0)
+                if (!string.IsNullOrEmpty(url))
                 {
-                    return RedirectToAction(nameof(Index));
-                }
-
-                string approvalUrl = await ServiceFacade.Instance(_configuration).PaymentWithPaypall(amount);
-                if (!string.IsNullOrEmpty(approvalUrl))
-                {
-                    return Redirect(approvalUrl);
+                    return Redirect(url);
                 }
                 else
                 {
                     throw new Exception("Error to initial Payment");
                 }
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 throw new Exception($"{ex.Message}");
             }

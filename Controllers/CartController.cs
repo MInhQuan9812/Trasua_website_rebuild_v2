@@ -5,6 +5,7 @@ using trasua_web_mvc.Dtos;
 using trasua_web_mvc.Infracstructures;
 using trasua_web_mvc.Infracstructures.Entities;
 using trasua_web_mvc.Infracstructures.Observer;
+using trasua_web_mvc.Infracstructures.Strategy;
 using trasua_web_mvc.Repositories;
 
 namespace trasua_web_mvc.Controllers
@@ -60,15 +61,17 @@ namespace trasua_web_mvc.Controllers
         [HttpPost]
         public async Task<IActionResult> Checkout(CheckoutDto checkoutDto)
         {
-            //xử lí đầu vào paymentId=> nếu payment không phải palpall
-            // không thì sử dụng checkout vs paypal
+
             var user = _context.User.Where(x => x.UserName.Equals(User.Identity.Name)).FirstOrDefault()
                         ?? throw new Exception("User is not logged");
+            IStrategy paymentStrategy;
             if (checkoutDto.PaymentId != 9)
             {
                 try
                 {
-                    await _worker.cartRepository.CheckOut(user.Id, checkoutDto);
+                    paymentStrategy = new DirectPaymentStrategy(_context, _configuration);
+                    var paymentContext = new PaymentContext(paymentStrategy);
+                    await paymentContext.ProcessOrderPayment(user.Id,checkoutDto);
                     return RedirectToAction("Index", "Home");
                 }
                 catch (Exception ex)
@@ -78,10 +81,14 @@ namespace trasua_web_mvc.Controllers
             }
             else
             {
-                var _amount = await _worker.cartRepository.GetTotalCheckout(user.Id, checkoutDto);
-                return RedirectToAction("PayUsingPaypal", "Payment", new { amount = _amount });
+                paymentStrategy = new PaypallPaymentStrategy(_context, _configuration);
+                var paymentContext= new PaymentContext(paymentStrategy);
+                await paymentContext.ProcessOrderPayment(user.Id, checkoutDto);
+                return RedirectToAction("RedirectApprovalUrl", "Payment", new { url = await paymentStrategy.GetApprovalUrl()});
             }
         }
+
+
 
         public async Task<IActionResult> RemoveItem(int productId)
         {
